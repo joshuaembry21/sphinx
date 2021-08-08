@@ -1,0 +1,277 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>cli-production_factor_analysis module &mdash; IPPF  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="src package" href="src.html" />
+    <link rel="prev" title="cli-modeling module" href="cli_modeling.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> IPPF
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="readme.html">North By Northwest - Initial Production Prediction Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html#requirements">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html#usage">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="onboarding.html">Onboarding</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Initial_Production_Prediction_Model</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cli_data_access.html">cli-data_access module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli_data_ingestion.html">cli-data_ingestion module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli_krig.html">cli-krig module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli_modeling.html">cli-modeling module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">cli-production_factor_analysis module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="src.html">src package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html">tests package</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">IPPF</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">Initial_Production_Prediction_Model</a> &raquo;</li>
+        
+      <li>cli-production_factor_analysis module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/cli_production_factor_analysis.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-cli_production_factor_analysis">
+<span id="cli-production-factor-analysis-module"></span><h1>cli-production_factor_analysis module<a class="headerlink" href="#module-cli_production_factor_analysis" title="Permalink to this headline">¶</a></h1>
+<p>Production Factor Analysis (Main)</p>
+<dl>
+<dt>Input data:</dt><dd><p>data_path - location of data folder within the project directory; type: ‘str’
+prod_zone: producing zone(s); type: ‘str’ or [‘str’]
+–group: production factor group index; type ‘str’; default: ‘0’
+–single-product: whether to treat the zone as a single product zone; type: bool; default: False
+–first-prod-year: lower bound to use for data pull; type: int; default: 2010
+–last-prod-year: upper bound to use for data pull; type: int; default: 2020
+–dont-discard-nan-prod: whether to ignore nan production values; type: bool; default: False
+–dont-save-plots-to-pdf: whether to save production factor plots to pdf; type: bool; default: False
+–dont-save-results-to-excel: whether to save production factor results to excel; type: bool; default: False
+–raw-data-to-excel: whether to output raw data to excel; type: bool; default: False
+–dont-overwrite-projection: whether to overwrite both PF and SDF projections; type: bool; default: False</p>
+<dl class="simple">
+<dt>Some valid producing zone names by basin/play:</dt><dd><p>anadarko - Woodford, Meramec Upper, Meramec Lower, Osage Lower
+appalachian - Utica_Point Pleasant, Marcellus
+arkoma - Fayetteville, Woodford
+delaware - Wolfcamp A Lower, Wolfcamp A XY, Wolfcamp B, Bone Spring Second Sand, Bone Spring Third Sand
+denver_julesburg - Niobrara A, Niobrara B, Niobrara C
+east_texas_arkla - Haynesville Upper, Haynesville Lower, Bossier Lower, Cotton Valley Sands
+fort_worth - Barnett Shale
+gulf_coast - Eagle Ford Lower, Eagle Ford Upper, Austin Chalk
+midland - Wolfcamp A, Wolfcamp B, Lower Spraberry
+powder_river - Turner-Frontier, Parkman
+williston - Bakken, Three Forks</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>&#64;author: Any Ordonez</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_production_factor_analysis.gather_args">
+<span class="sig-prename descclassname"><span class="pre">cli_production_factor_analysis.</span></span><span class="sig-name descname"><span class="pre">gather_args</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cli_production_factor_analysis.gather_args" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_production_factor_analysis.main">
+<span class="sig-prename descclassname"><span class="pre">cli_production_factor_analysis.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">argparse.Namespace</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#cli_production_factor_analysis.main" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_production_factor_analysis.pull_pf_group">
+<span class="sig-prename descclassname"><span class="pre">cli_production_factor_analysis.</span></span><span class="sig-name descname"><span class="pre">pull_pf_group</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">argparse.Namespace</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="src.ProductionFactor.html#src.ProductionFactor.ProductionFactorGroups.ProductionFactorGroup" title="src.ProductionFactor.ProductionFactorGroups.ProductionFactorGroup"><span class="pre">src.ProductionFactor.ProductionFactorGroups.ProductionFactorGroup</span></a></span></span><a class="headerlink" href="#cli_production_factor_analysis.pull_pf_group" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cli_production_factor_analysis.read_df_groups">
+<span class="sig-prename descclassname"><span class="pre">cli_production_factor_analysis.</span></span><span class="sig-name descname"><span class="pre">read_df_groups</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prod_zone</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cli_production_factor_analysis.read_df_groups" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="src.html" class="btn btn-neutral float-right" title="src package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="cli_modeling.html" class="btn btn-neutral float-left" title="cli-modeling module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Joshua Embry.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

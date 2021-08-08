@@ -1,0 +1,1031 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>src.Data package &mdash; IPPF  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="src.Economics package" href="src.Economics.html" />
+    <link rel="prev" title="src package" href="src.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> IPPF
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="readme.html">North By Northwest - Initial Production Prediction Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html#requirements">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html#usage">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="onboarding.html">Onboarding</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Initial_Production_Prediction_Model</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cli_data_access.html">cli-data_access module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli_data_ingestion.html">cli-data_ingestion module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli_krig.html">cli-krig module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli_modeling.html">cli-modeling module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli_production_factor_analysis.html">cli-production_factor_analysis module</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="src.html">src package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="src.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">src.Data package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.Economics.html">src.Economics package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.Logging.html">src.Logging package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.Modeling.html">src.Modeling package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.Plotting.html">src.Plotting package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.ProductionFactor.html">src.ProductionFactor package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.html#module-src">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html">tests package</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">IPPF</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">Initial_Production_Prediction_Model</a> &raquo;</li>
+        
+          <li><a href="src.html">src package</a> &raquo;</li>
+        
+      <li>src.Data package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/src.Data.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="src-data-package">
+<h1>src.Data package<a class="headerlink" href="#src-data-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-src.Data.ModelGroup">
+<span id="src-data-modelgroup-module"></span><h2>src.Data.ModelGroup module<a class="headerlink" href="#module-src.Data.ModelGroup" title="Permalink to this headline">¶</a></h2>
+<p>ModelGroup implementation for orchestrating modeling of a given group of data</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.Data.ModelGroup.ModelGroup">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.Data.ModelGroup.</span></span><span class="sig-name descname"><span class="pre">ModelGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">producing_zone</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">operator</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_features</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">None.datetime.date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">None.datetime.date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequency</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_format</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_modeling_results</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retrain</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scoring_metric</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'mae'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tune</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_importance</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recompute_depletion</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">krig_method</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'IDW'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">krig_feature</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'MidPerf'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">months_held_for_testing</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recompute_krig</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">krig_func</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'1.0'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_lat_long</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_depletion</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_using_length</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">krig_residual_label</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_transform_label</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">standardize_label</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_auto_tune</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_tune_amount</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.Data.ModelGroup.ModelGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.Data.ModelGroup.ModelGroup.determine_fitness_of_group">
+<span class="sig-name descname"><span class="pre">determine_fitness_of_group</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.Data.ModelGroup.ModelGroup.determine_fitness_of_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>determines if the data is sufficient for modeling</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.Data.ModelGroup.ModelGroup.get_data_path">
+<span class="sig-name descname"><span class="pre">get_data_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pathlib.Path</span></span></span><a class="headerlink" href="#src.Data.ModelGroup.ModelGroup.get_data_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>constructs the data path for the modeling group and creates the directories within if they do not exist</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Path to model group directory</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.Data.ModelGroup.ModelGroup.has_default_inputs">
+<span class="sig-name descname"><span class="pre">has_default_inputs</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#src.Data.ModelGroup.ModelGroup.has_default_inputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>checks whether the modeling group has default inputs</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>bool stating whether the modeling group has default inputs or not</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.Data.ModelGroup.ModelGroup.model_through_time">
+<span class="sig-name descname"><span class="pre">model_through_time</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.Data.ModelGroup.ModelGroup.model_through_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>suite which models a given modeling group over a moving date window to depict data changes over time</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.Data.ModelGroup.ModelGroup.modeling_result_suite">
+<span class="sig-name descname"><span class="pre">modeling_result_suite</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">results_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.Data.ModelGroup.ModelGroup.modeling_result_suite" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes inverse IPPF calculation of results and saves plots of each step of inverse</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>results_df</strong> (<em>pd.DataFrame</em>) – modeling prediction results to use for calculations</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.Data.ModelGroup.ModelGroup.modeling_suite">
+<span class="sig-name descname"><span class="pre">modeling_suite</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.Data.ModelGroup.ModelGroup.modeling_suite" title="Permalink to this definition">¶</a></dt>
+<dd><p>Main suite for modeling. Trains multiple different types of models and saves their results</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.Data.ModelGroup.ModelGroup.output_modeling_scores">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">output_modeling_scores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">models</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_group</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.Data.ModelGroup.ModelGroup.output_modeling_scores" title="Permalink to this definition">¶</a></dt>
+<dd><p>utility for outputting modeling scores</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pd.DataFrame</em>) – contains training and testing data to measure from</p></li>
+<li><p><strong>models</strong> (<em>list</em>) – list of model names to measure for</p></li>
+<li><p><strong>data_group</strong> (<em>str</em>) – name of group of data in the prediction backpropagation process to measure for</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.Data.ModelGroup.ModelGroup.output_plot_modeling_results">
+<span class="sig-name descname"><span class="pre">output_plot_modeling_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">models</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_group</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.Data.ModelGroup.ModelGroup.output_plot_modeling_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Utility that plots the residuals for the given models compared to actual</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pd.DataFrame</em>) – training and testing data for plotting</p></li>
+<li><p><strong>models</strong> (<em>list</em>) – names of models to plot for</p></li>
+<li><p><strong>data_group</strong> (<em>str</em>) – name of group of data in hte prediction backpropagation process to plot for</p></li>
+<li><p><strong>file_name</strong> (<em>str</em>) – name of plot file to save</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.Data.ModelGroup.ModelGroup.output_results">
+<span class="sig-name descname"><span class="pre">output_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">models</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_group</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.Data.ModelGroup.ModelGroup.output_results" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> – </p></li>
+<li><p><strong>models</strong> – </p></li>
+<li><p><strong>data_group</strong> – </p></li>
+<li><p><strong>file_name</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.Data.ModelGroup.ModelGroup.prep_modeling_space">
+<span class="sig-name descname"><span class="pre">prep_modeling_space</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">,</span> </span><a class="reference internal" href="#src.Data.pre_processing.DataContainer" title="src.Data.pre_processing.DataContainer"><span class="pre">src.Data.pre_processing.DataContainer</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#src.Data.ModelGroup.ModelGroup.prep_modeling_space" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pre-processing data by computing depletion factors, krigs, and processes data for modeling</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>dictionary of splits of data for training, valuation, and testing. Also returns DataContainer instance</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.Data.ModelGroup.ModelGroup.read_data">
+<span class="sig-name descname"><span class="pre">read_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">unique_value_bar</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">,</span> </span><span class="pre">bool</span><span class="p"><span class="pre">,</span> </span><span class="pre">bool</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#src.Data.ModelGroup.ModelGroup.read_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>gathers the wells ids associated with the modeling group and check whether it is sufficient to model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>unique_value_bar</strong> (<em>int</em>) – number of unique values to constitute a dataset with enough unique data to model</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of api’s associated with group, and whether there are</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.Data.ModelGroup.ModelGroup.set_case">
+<span class="sig-name descname"><span class="pre">set_case</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">pathlib.Path</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#src.Data.ModelGroup.ModelGroup.set_case" title="Permalink to this definition">¶</a></dt>
+<dd><p>determines whether there is a general case of the ModelGroup instance</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>If there is a general case, the path of the general case is returned</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.Data.ModelGroup.ModelGroup.set_name">
+<span class="sig-name descname"><span class="pre">set_name</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#src.Data.ModelGroup.ModelGroup.set_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>sets the name of the ModelGroup</p>
+<dl class="simple">
+<dt>Returns</dt><dd><p>name of ModelGroup based on producing zone, operator, and additional_features inputs</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.Data.ModelGroup.ModelGroup.sure_up_data">
+<span class="sig-name descname"><span class="pre">sure_up_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.Data.ModelGroup.ModelGroup.sure_up_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>copies over source data from generalized case of model group</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-src.Data.data_ingestion">
+<span id="src-data-data-ingestion-module"></span><h2>src.Data.data_ingestion module<a class="headerlink" href="#module-src.Data.data_ingestion" title="Permalink to this headline">¶</a></h2>
+<p>This file contains different methods data ingestion from downloaded drilling info data to master dataframe</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.data_ingestion.add_raw_peak_resource_columns">
+<span class="sig-prename descclassname"><span class="pre">src.Data.data_ingestion.</span></span><span class="sig-name descname"><span class="pre">add_raw_peak_resource_columns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.Data.data_ingestion.add_raw_peak_resource_columns" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.data_ingestion.anadarko_prod_zone">
+<span class="sig-prename descclassname"><span class="pre">src.Data.data_ingestion.</span></span><span class="sig-name descname"><span class="pre">anadarko_prod_zone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">landing_zone</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">well_number</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_formation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">producing_reservoir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.Data.data_ingestion.anadarko_prod_zone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.data_ingestion.appalachian_prod_zone">
+<span class="sig-prename descclassname"><span class="pre">src.Data.data_ingestion.</span></span><span class="sig-name descname"><span class="pre">appalachian_prod_zone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">landing_zone</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">well_number</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_formation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">producing_reservoir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.Data.data_ingestion.appalachian_prod_zone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.data_ingestion.arkoma_prod_zone">
+<span class="sig-prename descclassname"><span class="pre">src.Data.data_ingestion.</span></span><span class="sig-name descname"><span class="pre">arkoma_prod_zone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">landing_zone</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">well_number</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_formation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">producing_reservoir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.Data.data_ingestion.arkoma_prod_zone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.data_ingestion.calculated_variables">
+<span class="sig-prename descclassname"><span class="pre">src.Data.data_ingestion.</span></span><span class="sig-name descname"><span class="pre">calculated_variables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">well_header_df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.Data.data_ingestion.calculated_variables" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>wellH_df</strong> – Well headers dataframe (Well Headers file from DrillingInfo)</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Returns</dt><dd><p>wellH_df + calculated variables (also known as One-Line Summary)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.data_ingestion.delaware_prod_zone">
+<span class="sig-prename descclassname"><span class="pre">src.Data.data_ingestion.</span></span><span class="sig-name descname"><span class="pre">delaware_prod_zone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">landing_zone</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">well_number</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_formation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">producing_reservoir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.Data.data_ingestion.delaware_prod_zone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.data_ingestion.denver_julesburg_prod_zone">
+<span class="sig-prename descclassname"><span class="pre">src.Data.data_ingestion.</span></span><span class="sig-name descname"><span class="pre">denver_julesburg_prod_zone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">landing_zone</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">well_number</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_formation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">producing_reservoir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.Data.data_ingestion.denver_julesburg_prod_zone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.data_ingestion.east_texas_arkla_prod_zone">
+<span class="sig-prename descclassname"><span class="pre">src.Data.data_ingestion.</span></span><span class="sig-name descname"><span class="pre">east_texas_arkla_prod_zone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">landing_zone</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">well_number</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_formation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">producing_reservoir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.Data.data_ingestion.east_texas_arkla_prod_zone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.data_ingestion.find_appropriate_group_for_value">
+<span class="sig-prename descclassname"><span class="pre">src.Data.data_ingestion.</span></span><span class="sig-name descname"><span class="pre">find_appropriate_group_for_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_list</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bins</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.array</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#src.Data.data_ingestion.find_appropriate_group_for_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.data_ingestion.find_play_files">
+<span class="sig-prename descclassname"><span class="pre">src.Data.data_ingestion.</span></span><span class="sig-name descname"><span class="pre">find_play_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">play</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#src.Data.data_ingestion.find_play_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>looks for play files and checks to see what exists</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>play</strong> (<em>str</em>) – name of play</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>patterns for file names and whether they exist</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.data_ingestion.fort_worth_prod_zone">
+<span class="sig-prename descclassname"><span class="pre">src.Data.data_ingestion.</span></span><span class="sig-name descname"><span class="pre">fort_worth_prod_zone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">landing_zone</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">well_number</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_formation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">producing_reservoir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.Data.data_ingestion.fort_worth_prod_zone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.data_ingestion.generate_group_bin_list">
+<span class="sig-prename descclassname"><span class="pre">src.Data.data_ingestion.</span></span><span class="sig-name descname"><span class="pre">generate_group_bin_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bins</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">units</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#src.Data.data_ingestion.generate_group_bin_list" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.data_ingestion.groups_by_year">
+<span class="sig-prename descclassname"><span class="pre">src.Data.data_ingestion.</span></span><span class="sig-name descname"><span class="pre">groups_by_year</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.Data.data_ingestion.groups_by_year" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function cluster wells by first production year, spud year, and completion year</p>
+<dl class="simple">
+<dt>arg:</dt><dd><p>ols_df: one-line summary dataframe</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>ols_df (+ ‘First Prod Year’, ‘Spud Year’, and ‘Completion Year’ columns)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.data_ingestion.gulf_coast_prod_zone">
+<span class="sig-prename descclassname"><span class="pre">src.Data.data_ingestion.</span></span><span class="sig-name descname"><span class="pre">gulf_coast_prod_zone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">landing_zone</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">well_number</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_formation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">producing_reservoir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.Data.data_ingestion.gulf_coast_prod_zone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.data_ingestion.ippf_group_generator">
+<span class="sig-prename descclassname"><span class="pre">src.Data.data_ingestion.</span></span><span class="sig-name descname"><span class="pre">ippf_group_generator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ols_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ippf_bins</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fluid</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">,</span> </span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#src.Data.data_ingestion.ippf_group_generator" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function cluster wells by ippf (according to the specified bins)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ols_df</strong> – one-line summary dataframe</p></li>
+<li><p><strong>ippf_bins</strong> – list of 1 or 3 values (ippf percentiles)</p></li>
+<li><p><strong>fluid</strong> – ‘Oil’ or ‘Gas’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ols_df (+ ‘ippf Group’ column)
+ippf_group_list - list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.data_ingestion.lat_length_group_generator">
+<span class="sig-prename descclassname"><span class="pre">src.Data.data_ingestion.</span></span><span class="sig-name descname"><span class="pre">lat_length_group_generator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">play_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat_len_group_option</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">,</span> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#src.Data.data_ingestion.lat_length_group_generator" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function cluster wells by lateral length</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ols_df</strong> – one-line summary dataframe</p></li>
+<li><p><strong>play_name</strong> – e.g.: ‘delaware’</p></li>
+<li><p><strong>lat_len_group_option</strong> – it selects which set of lat_len_bins should be used for clustering,
+and it varies for each basin/play (see lat_len_bins_dict below).
+0 - used for production factor analyses
+1 - used for production factor pre-analyses</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ols_df (+ ‘Lateral Length Group’ column) - dataframe
+lat_len_group_list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.data_ingestion.midland_prod_zone">
+<span class="sig-prename descclassname"><span class="pre">src.Data.data_ingestion.</span></span><span class="sig-name descname"><span class="pre">midland_prod_zone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">landing_zone</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">well_number</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_formation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">producing_reservoir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.Data.data_ingestion.midland_prod_zone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.data_ingestion.normalize_monthly_production_data">
+<span class="sig-prename descclassname"><span class="pre">src.Data.data_ingestion.</span></span><span class="sig-name descname"><span class="pre">normalize_monthly_production_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.Data.data_ingestion.normalize_monthly_production_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets each month to the cumulative month the data represents for a given well
+:param data_path: path to data directory
+:type data_path: Path</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.data_ingestion.outlier_flag">
+<span class="sig-prename descclassname"><span class="pre">src.Data.data_ingestion.</span></span><span class="sig-name descname"><span class="pre">outlier_flag</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">play_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lateral_length</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">proppant_per_ft</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.Data.data_ingestion.outlier_flag" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>play_name</strong> – play (or basin) name</p></li>
+<li><p><strong>lateral_length</strong> – ‘DI Lateral Length’ (from Well Headers file)</p></li>
+<li><p><strong>proppant_perFoot</strong> – ‘Total Proppant per Foot’ (calculated variable)</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>returns</dt><dd><p>1 - outlier
+0 - usual (or typical) values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.data_ingestion.powder_river_prod_zone">
+<span class="sig-prename descclassname"><span class="pre">src.Data.data_ingestion.</span></span><span class="sig-name descname"><span class="pre">powder_river_prod_zone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">landing_zone</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">well_number</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_formation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">producing_reservoir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.Data.data_ingestion.powder_river_prod_zone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.data_ingestion.process_data">
+<span class="sig-prename descclassname"><span class="pre">src.Data.data_ingestion.</span></span><span class="sig-name descname"><span class="pre">process_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ols_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mp_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">traj_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">,</span> </span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">,</span> </span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#src.Data.data_ingestion.process_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>wrapper for processing step of the three dataframes</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ols_df</strong> (<em>pd.DataFrame</em>) – one line summary data</p></li>
+<li><p><strong>mp_df</strong> (<em>pd.DataFrame</em>) – monthly production data</p></li>
+<li><p><strong>traj_df</strong> (<em>pd.DataFrame</em>) – trajectory data</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the three pd.DataFrames with light processing</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.data_ingestion.process_mp">
+<span class="sig-prename descclassname"><span class="pre">src.Data.data_ingestion.</span></span><span class="sig-name descname"><span class="pre">process_mp</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mp_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Data.data_ingestion.process_mp" title="Permalink to this definition">¶</a></dt>
+<dd><p>light processing of monthly production data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>mp_df</strong> (<em>pd.DataFrame</em>) – monthly production data</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>pd.DataFrame of initial processing of monthly production data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.data_ingestion.process_ols">
+<span class="sig-prename descclassname"><span class="pre">src.Data.data_ingestion.</span></span><span class="sig-name descname"><span class="pre">process_ols</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ols_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Data.data_ingestion.process_ols" title="Permalink to this definition">¶</a></dt>
+<dd><p>light processing of one line summary data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>ols_df</strong> (<em>pd.DataFrame</em>) – one line summary data</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>pd.DataFrame of initial processing of one line summary data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.data_ingestion.process_traj">
+<span class="sig-prename descclassname"><span class="pre">src.Data.data_ingestion.</span></span><span class="sig-name descname"><span class="pre">process_traj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">traj_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Data.data_ingestion.process_traj" title="Permalink to this definition">¶</a></dt>
+<dd><p>light processing of trajectory data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>traj_df</strong> (<em>pd.DataFrame</em>) – trajectory data</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>pd.DataFrame of initial processing of trajectory data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.data_ingestion.read_data">
+<span class="sig-prename descclassname"><span class="pre">src.Data.data_ingestion.</span></span><span class="sig-name descname"><span class="pre">read_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">patterns</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">,</span> </span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">,</span> </span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#src.Data.data_ingestion.read_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>reads data in using the passed patterns</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>patterns</strong> (<em>dict</em>) – contains patterns for file names to read in</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>three pd.DataFrames, one for one line summary, monthly production, and trajectory data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.data_ingestion.read_normalize_monthly_production_data">
+<span class="sig-prename descclassname"><span class="pre">src.Data.data_ingestion.</span></span><span class="sig-name descname"><span class="pre">read_normalize_monthly_production_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">,</span> </span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">,</span> </span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#src.Data.data_ingestion.read_normalize_monthly_production_data" title="Permalink to this definition">¶</a></dt>
+<dd><ul class="simple">
+<li><p>reads in production data from disk,</p></li>
+<li><p>handles ‘Normalized Month’ and ‘First Month Production’,</p></li>
+<li><p>sorts out what data is new</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_path</strong> (<em>Path</em>) – location of file</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>old, update, and new monthly production data for normalization</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.data_ingestion.update_basic_inputs">
+<span class="sig-prename descclassname"><span class="pre">src.Data.data_ingestion.</span></span><span class="sig-name descname"><span class="pre">update_basic_inputs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path_dict</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.Data.data_ingestion.update_basic_inputs" title="Permalink to this definition">¶</a></dt>
+<dd><p>updates basic input entries in the file store with new data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path_dict</strong> (<em>dict</em>) – dict that must contain ‘play’ and ‘basic_input’ path entries</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.data_ingestion.update_existing">
+<span class="sig-prename descclassname"><span class="pre">src.Data.data_ingestion.</span></span><span class="sig-name descname"><span class="pre">update_existing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">existing_df_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.Data.data_ingestion.update_existing" title="Permalink to this definition">¶</a></dt>
+<dd><p>updates existing data frame if it exists, else it simply saves the dataframe</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>new_df</strong> (<em>pd.DataFrame</em>) – new data to save</p></li>
+<li><p><strong>existing_df_path</strong> (<em>Path</em>) – location of existing data or where the new data should be saved</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.data_ingestion.williston_prod_zone">
+<span class="sig-prename descclassname"><span class="pre">src.Data.data_ingestion.</span></span><span class="sig-name descname"><span class="pre">williston_prod_zone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">landing_zone</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">well_number</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_formation</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">producing_reservoir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.Data.data_ingestion.williston_prod_zone" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>landing_zone</strong> – </p></li>
+<li><p><strong>well_number</strong> (<em>only used for williston basin</em>) – </p></li>
+<li><p><strong>target_formation</strong> – </p></li>
+<li><p><strong>producing_reservoir</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>producing zone (str)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.data_ingestion.write_one_line_summary_files">
+<span class="sig-prename descclassname"><span class="pre">src.Data.data_ingestion.</span></span><span class="sig-name descname"><span class="pre">write_one_line_summary_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_category_hists</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.Data.data_ingestion.write_one_line_summary_files" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-src.Data.pre_processing">
+<span id="src-data-pre-processing-module"></span><h2>src.Data.pre_processing module<a class="headerlink" href="#module-src.Data.pre_processing" title="Permalink to this headline">¶</a></h2>
+<p>This file contains data pre-processing methods and classes</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.Data.pre_processing.DataContainer">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.Data.pre_processing.</span></span><span class="sig-name descname"><span class="pre">DataContainer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_group</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_features</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">None.datetime.date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">None.datetime.date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_lat_long</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">krig_residual_label</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_depletion</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_using_length</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">standardize_label</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power_transform_label</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">depletion_distances</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_format</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">14</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">krig_method</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'IDW_1'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.Data.pre_processing.DataContainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Datatype which takes in raw Drilling Info data, processes it for modeling, and returns the X and y</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.Data.pre_processing.DataContainer.get_data_split">
+<span class="sig-name descname"><span class="pre">get_data_split</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">months_to_keep_for_validation</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#src.Data.pre_processing.DataContainer.get_data_split" title="Permalink to this definition">¶</a></dt>
+<dd><p>splits data between training, validation, and testing</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>months_to_keep_for_validation</strong> (<em>int</em>) – months to keep for validation set</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dictionary of training and testing data [‘x_train’, ‘y_train’, ‘x_test’, ‘y_test’]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.Data.pre_processing.DataContainer.get_prediction_data">
+<span class="sig-name descname"><span class="pre">get_prediction_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Data.pre_processing.DataContainer.get_prediction_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves prediction data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>class member that contains the predicted data processed appropriately for inference</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.Data.pre_processing.DataContainer.get_processing_results">
+<span class="sig-name descname"><span class="pre">get_processing_results</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">,</span> </span><span class="pre">pandas.core.series.Series</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#src.Data.pre_processing.DataContainer.get_processing_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns X and y from the dataset after processing occurs</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>tuple of input features and labels</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.Data.pre_processing.DataContainer.get_raw_data_used">
+<span class="sig-name descname"><span class="pre">get_raw_data_used</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Data.pre_processing.DataContainer.get_raw_data_used" title="Permalink to this definition">¶</a></dt>
+<dd><p>accessor function for the raw data that is used in this modeling process for data exploration purposes</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>dataframe of data untouched by processing steps</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.Data.pre_processing.DataContainer.get_transformers">
+<span class="sig-name descname"><span class="pre">get_transformers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#src.Data.pre_processing.DataContainer.get_transformers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieves transformers</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>dict of transformers</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.Data.pre_processing.DataContainer.process_categories">
+<span class="sig-name descname"><span class="pre">process_categories</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">,</span> </span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#src.Data.pre_processing.DataContainer.process_categories" title="Permalink to this definition">¶</a></dt>
+<dd><p>Processes all categorical attributes and performs one-hot encoding</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>dataframes of processed data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.Data.pre_processing.DataContainer.process_data">
+<span class="sig-name descname"><span class="pre">process_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">,</span> </span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#src.Data.pre_processing.DataContainer.process_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Suite which calls various processing methods</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>training and testing data that has been processed</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.Data.pre_processing.DataContainer.process_dates_to_ordinal">
+<span class="sig-name descname"><span class="pre">process_dates_to_ordinal</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.Data.pre_processing.DataContainer.process_dates_to_ordinal" title="Permalink to this definition">¶</a></dt>
+<dd><p>Processes date attributes to being ordinal, also removes all instances where this is empty,
+and trims dataset to be what is within passed parameters</p>
+<p>sets index to ‘Completion date’ for test/train split</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.Data.pre_processing.DataContainer.process_label">
+<span class="sig-name descname"><span class="pre">process_label</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.Data.pre_processing.DataContainer.process_label" title="Permalink to this definition">¶</a></dt>
+<dd><p>Does any processing that is required on the target and removes instances where the target is null</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.Data.pre_processing.DataContainer.process_numerical_data">
+<span class="sig-name descname"><span class="pre">process_numerical_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.Data.pre_processing.DataContainer.process_numerical_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Processes numerical data with a MinNaxScaler to put values between 0 and 1</p>
+<p>Missing values are imputed as 0 before the scalar is transforms the data</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.pre_processing.compute_tvd">
+<span class="sig-prename descclassname"><span class="pre">src.Data.pre_processing.</span></span><span class="sig-name descname"><span class="pre">compute_tvd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.series.Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trajectory_sub_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.series.Series</span></span></span><a class="headerlink" href="#src.Data.pre_processing.compute_tvd" title="Permalink to this definition">¶</a></dt>
+<dd><p>computes tvd using trajectory data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>row</strong> (<em>pd.Series</em>) – row of one line summary data</p></li>
+<li><p><strong>trajectory_sub_df</strong> (<em>pd.DataFrame</em>) – trajectory data associated with well</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>row data with computed twd</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.pre_processing.load_permit_data">
+<span class="sig-prename descclassname"><span class="pre">src.Data.pre_processing.</span></span><span class="sig-name descname"><span class="pre">load_permit_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_information</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ols_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'2020-10-28'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_wells</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Data.pre_processing.load_permit_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>either loads permit data provided or fabricates data from ols</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file_information</strong> (<em>dict</em>) – file locations to load data from</p></li>
+<li><p><strong>ols_df</strong> (<em>pd.DataFrame</em>) – one line summary data to potentially sample from</p></li>
+<li><p><strong>date</strong> (<em>str</em>) – date to assign to permit data</p></li>
+<li><p><strong>num_wells</strong> (<em>int</em>) – number of wells to sample</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>permit data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.pre_processing.read_data">
+<span class="sig-prename descclassname"><span class="pre">src.Data.pre_processing.</span></span><span class="sig-name descname"><span class="pre">read_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path_dir_dict</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">columns</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Data.pre_processing.read_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>utility to read data from file for passed paths</p>
+<p>parquet takes precedent over other storage methods. If a parquet file does not exist, one is written</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>path_dir_dict</strong> (<em>dict</em>) – dict containing paths for ‘parquet’, ‘xlsx’, ‘csv’ where the file type matches</p></li>
+<li><p><strong>columns</strong> (<em>list</em>) – list of str that are the names of the columns to be read</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the read dataframe from disk</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-src.Data.utility_functions">
+<span id="src-data-utility-functions-module"></span><h2>src.Data.utility_functions module<a class="headerlink" href="#module-src.Data.utility_functions" title="Permalink to this headline">¶</a></h2>
+<p>file containing various utilities to support dataset structuring</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.utility_functions.combine_csv_files">
+<span class="sig-prename descclassname"><span class="pre">src.Data.utility_functions.</span></span><span class="sig-name descname"><span class="pre">combine_csv_files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_dir_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">results_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extension</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'CSV'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.Data.utility_functions.combine_csv_files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Combines csv files into a single csv file
+:param file_dir_path: path to directory containing files needing to be merged
+:type file_dir_path: Path
+:param results_path: file name and path to write result
+:type results_path: Path
+:param extension: file extension text
+:type extension: str</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.utility_functions.convert_api10_to_api14">
+<span class="sig-prename descclassname"><span class="pre">src.Data.utility_functions.</span></span><span class="sig-name descname"><span class="pre">convert_api10_to_api14</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">api14</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#src.Data.utility_functions.convert_api10_to_api14" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.utility_functions.filter_ols_table">
+<span class="sig-prename descclassname"><span class="pre">src.Data.utility_functions.</span></span><span class="sig-name descname"><span class="pre">filter_ols_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ols_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">basin</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prod_zone</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat_len_group</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prod_type</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">play</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subplay</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">county</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">township_loc</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">range_loc</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first_prod_year</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">2010</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discard_nan_prod</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Data.utility_functions.filter_ols_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function filter the one-line summary dataframe</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ols_df</strong> – one-line summary dataframe</p></li>
+<li><p><strong>basin</strong> – DI Basin(s); type: ‘str’ or [‘str’]; default: ‘all’</p></li>
+<li><p><strong>prod_zone</strong> – Producing zone(s); type: ‘str’ or [‘str’]; default: ‘all’ (‘except Other Zone’)</p></li>
+<li><p><strong>lat_len_group</strong> – Lateral length group(s); type: ‘str’ or [‘str’]; default: ‘all’</p></li>
+<li><p><strong>prod_type</strong> – Production type(s); type: ‘str’ or [‘str’]; default: ‘all’</p></li>
+<li><p><strong>play</strong> – DI Play(s); type: ‘str’ or [‘str’]; default: ‘all’</p></li>
+<li><p><strong>subplay</strong> – DI Subplay(s); type: ‘str’ or [‘str’]; default: ‘all’</p></li>
+<li><p><strong>state</strong> – State(s); type: ‘str’ or [‘str’]; default: ‘all’</p></li>
+<li><p><strong>county</strong> – County/Parish(es); type: ‘str’ or [‘str’]; default: ‘all’</p></li>
+<li><p><strong>township_loc</strong> – Township(s); type: ‘str’ or [‘str’]; default: ‘all’</p></li>
+<li><p><strong>range_loc</strong> – Range(s); type: ‘str’ or [‘str’]; default: ‘all’</p></li>
+<li><p><strong>first_prod_year</strong> – if single year (data &gt;= year) | if multiple years (data with year = y1, y2, …, and yn)</p></li>
+<li><p><strong>discard_nan_prod</strong> – if True it drops rows with NaN values in both Peak Oil and Peak Gas</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>ols_df (filtered by categories and prod data &lt;&gt; NaN)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.utility_functions.get_basin_from_playname">
+<span class="sig-prename descclassname"><span class="pre">src.Data.utility_functions.</span></span><span class="sig-name descname"><span class="pre">get_basin_from_playname</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">play_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.Data.utility_functions.get_basin_from_playname" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.utility_functions.get_modeling_group_data">
+<span class="sig-prename descclassname"><span class="pre">src.Data.utility_functions.</span></span><span class="sig-name descname"><span class="pre">get_modeling_group_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_head_pth</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">get_most_recent</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">get_most_recent_for_each_split</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ols_cols</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">result_cols</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Data.utility_functions.get_modeling_group_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.utility_functions.get_wells_with_negative_prod">
+<span class="sig-prename descclassname"><span class="pre">src.Data.utility_functions.</span></span><span class="sig-name descname"><span class="pre">get_wells_with_negative_prod</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prod_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#src.Data.utility_functions.get_wells_with_negative_prod" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.utility_functions.load_permit_data">
+<span class="sig-prename descclassname"><span class="pre">src.Data.utility_functions.</span></span><span class="sig-name descname"><span class="pre">load_permit_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_information</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ols_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'2020-12-21'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_wells</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_format</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">14</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Data.utility_functions.load_permit_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>loads in permit data for processing to inference
+:param file_information: location of permit data
+:type file_information: Path
+:param ols_df: one line summary data for the modeling group associated with the permit data
+:type ols_df: pd.DataFrame
+:param date: date to use for permit data
+:type date: str
+:param num_wells: number of wells to sample if synthetic data is created
+:type num_wells: int
+:param api_format: api format to index data on
+:type api_format: int</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>permit data found or synthetic sampled data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.utility_functions.process_list_parser_argument">
+<span class="sig-prename descclassname"><span class="pre">src.Data.utility_functions.</span></span><span class="sig-name descname"><span class="pre">process_list_parser_argument</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">argument</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#src.Data.utility_functions.process_list_parser_argument" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.utility_functions.pull_most_recent_modeling_group_results_all_resources_and_splits">
+<span class="sig-prename descclassname"><span class="pre">src.Data.utility_functions.</span></span><span class="sig-name descname"><span class="pre">pull_most_recent_modeling_group_results_all_resources_and_splits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_file_loc</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ols_cols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">results_cols</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.Data.utility_functions.pull_most_recent_modeling_group_results_all_resources_and_splits" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.utility_functions.radius_conversion">
+<span class="sig-prename descclassname"><span class="pre">src.Data.utility_functions.</span></span><span class="sig-name descname"><span class="pre">radius_conversion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">latitude</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elevation</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tvd</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.array</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.array</span></span></span><a class="headerlink" href="#src.Data.utility_functions.radius_conversion" title="Permalink to this definition">¶</a></dt>
+<dd><p>takes in latitude and elevation of a point and returns the foot radius value of the point
+:param latitude: latitude (in decrees) of point
+:type latitude: np.array
+:param elevation: elevation (in feet) of point from sea level
+:type elevation: np.array
+:param tvd: true vertical depth (in feet) of point from sea level
+:type tvd: np.array</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>foot value np.array of radius of location on earth</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.utility_functions.remove_characters_from_string">
+<span class="sig-prename descclassname"><span class="pre">src.Data.utility_functions.</span></span><span class="sig-name descname"><span class="pre">remove_characters_from_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">text</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#src.Data.utility_functions.remove_characters_from_string" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.utility_functions.series_values_as_dict">
+<span class="sig-prename descclassname"><span class="pre">src.Data.utility_functions.</span></span><span class="sig-name descname"><span class="pre">series_values_as_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">series_object</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.series.Series</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#src.Data.utility_functions.series_values_as_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Data.utility_functions.weave_dataset">
+<span class="sig-prename descclassname"><span class="pre">src.Data.utility_functions.</span></span><span class="sig-name descname"><span class="pre">weave_dataset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_members</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_initial_input</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_blend</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Data.utility_functions.weave_dataset" title="Permalink to this definition">¶</a></dt>
+<dd><p>constructs input data sets for ensemble models
+:param model_members: list of models
+:type model_members: list
+:param x_initial_input: initial modeling input
+:type x_initial_input: pd.DataFrame
+:param to_blend: whether to blend or stack data
+:type to_blend: bool</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>Dataframe of merged data</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-src.Data">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-src.Data" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="src.Economics.html" class="btn btn-neutral float-right" title="src.Economics package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="src.html" class="btn btn-neutral float-left" title="src package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Joshua Embry.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

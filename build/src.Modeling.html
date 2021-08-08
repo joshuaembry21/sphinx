@@ -1,0 +1,1257 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>src.Modeling package &mdash; IPPF  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="src.Plotting package" href="src.Plotting.html" />
+    <link rel="prev" title="src.Logging package" href="src.Logging.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> IPPF
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="readme.html">North By Northwest - Initial Production Prediction Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html#requirements">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html#usage">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="onboarding.html">Onboarding</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Initial_Production_Prediction_Model</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cli_data_access.html">cli-data_access module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli_data_ingestion.html">cli-data_ingestion module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli_krig.html">cli-krig module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli_modeling.html">cli-modeling module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli_production_factor_analysis.html">cli-production_factor_analysis module</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="src.html">src package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="src.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="src.Data.html">src.Data package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.Economics.html">src.Economics package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.Logging.html">src.Logging package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">src.Modeling package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.Plotting.html">src.Plotting package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.ProductionFactor.html">src.ProductionFactor package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.html#module-src">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html">tests package</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">IPPF</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">Initial_Production_Prediction_Model</a> &raquo;</li>
+        
+          <li><a href="src.html">src package</a> &raquo;</li>
+        
+      <li>src.Modeling package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/src.Modeling.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="src-modeling-package">
+<h1>src.Modeling package<a class="headerlink" href="#src-modeling-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-src.Modeling.IDW">
+<span id="src-modeling-idw-module"></span><h2>src.Modeling.IDW module<a class="headerlink" href="#module-src.Modeling.IDW" title="Permalink to this headline">¶</a></h2>
+<p>This file contains modeling utilities, classes, and methods</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.IDW.get_krig_method_label">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.IDW.</span></span><span class="sig-name descname"><span class="pre">get_krig_method_label</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.Modeling.IDW.get_krig_method_label" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.IDW.idw">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.IDW.</span></span><span class="sig-name descname"><span class="pre">idw</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">neighbor_values</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">neighbor_distances</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">power</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#src.Modeling.IDW.idw" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.IDW.idw_helper">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.IDW.</span></span><span class="sig-name descname"><span class="pre">idw_helper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">training_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_predict_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ols_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feat_lat</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feat_lng</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resource</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Modeling.IDW.idw_helper" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.IDW.krig_data">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.IDW.</span></span><span class="sig-name descname"><span class="pre">krig_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_format</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">14</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'MidPerf'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recompute</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'IDW'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">float</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first_month_to_model</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">datetime.date</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">datetime.date(2012,</span> <span class="pre">1,</span> <span class="pre">1)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">months_between</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wells_req</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.Modeling.IDW.krig_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Krigs data using the passed feature to predict both Peak Oil and Peak Gas.</p>
+<p>From the first date to start modeling results are modeled from month to month using all available data from the past</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_path</strong> (<em>Path</em>) – location of data on disk</p></li>
+<li><p><strong>api_format</strong> (<em>int</em>) – type of api to index data on</p></li>
+<li><p><strong>feature</strong> (<em>str</em>) – name of feature to use as input for modeling</p></li>
+<li><p><strong>recompute</strong> (<em>bool</em>) – whether to recompute krig results</p></li>
+<li><p><strong>method</strong> (<em>str</em>) – what method to use for krig</p></li>
+<li><p><strong>func</strong> (<em>str</em>) – name of function to use for Rbf modeling, or power to use for IDW</p></li>
+<li><p><strong>first_month_to_model</strong> (<em>date</em>) – date to start modeling for</p></li>
+<li><p><strong>months_between</strong> (<em>int</em>) – number of months between training and prediction data</p></li>
+<li><p><strong>wells_req</strong> (<em>int</em>) – minimum number of wells required to trigger kriging to occur</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.IDW.krig_director">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.IDW.</span></span><span class="sig-name descname"><span class="pre">krig_director</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">krig_type</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">training_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_predict_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ols_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feat_lat</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feat_lng</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resource</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">float</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Modeling.IDW.krig_director" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.IDW.rbf_helper">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.IDW.</span></span><span class="sig-name descname"><span class="pre">rbf_helper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">training_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">to_predict_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ols_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feat_lat</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feat_lng</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resource</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">func</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Modeling.IDW.rbf_helper" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-src.Modeling.OHModeling">
+<span id="src-modeling-ohmodeling-module"></span><h2>src.Modeling.OHModeling module<a class="headerlink" href="#module-src.Modeling.OHModeling" title="Permalink to this headline">¶</a></h2>
+<p>routine for modeling OH peak production data into monthly values and a peak</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.OHModeling.add_reporting_period_data">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.OHModeling.</span></span><span class="sig-name descname"><span class="pre">add_reporting_period_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ols_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mp_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resources</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Modeling.OHModeling.add_reporting_period_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.OHModeling.apply_and_save_results">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.OHModeling.</span></span><span class="sig-name descname"><span class="pre">apply_and_save_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_to_update_with</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.Modeling.OHModeling.apply_and_save_results" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.OHModeling.compute_monthly_production">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.OHModeling.</span></span><span class="sig-name descname"><span class="pre">compute_monthly_production</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.series.Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pf_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.array</span></span></span><a class="headerlink" href="#src.Modeling.OHModeling.compute_monthly_production" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.OHModeling.compute_production_reporting_period">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.OHModeling.</span></span><span class="sig-name descname"><span class="pre">compute_production_reporting_period</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.series.Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reporting_period</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mp_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resource</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#src.Modeling.OHModeling.compute_production_reporting_period" title="Permalink to this definition">¶</a></dt>
+<dd><p>this is set up to work where reporting period and normalized month start at 0</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.OHModeling.compute_reporting_period">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.OHModeling.</span></span><span class="sig-name descname"><span class="pre">compute_reporting_period</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.series.Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reporting_period</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normal_period_duration</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#src.Modeling.OHModeling.compute_reporting_period" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.OHModeling.fit_data">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.OHModeling.</span></span><span class="sig-name descname"><span class="pre">fit_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">30</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.array</span><span class="p"><span class="pre">,</span> </span><span class="pre">numpy.array</span><span class="p"><span class="pre">,</span> </span><span class="pre">numpy.array</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#src.Modeling.OHModeling.fit_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.OHModeling.get_bin">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.OHModeling.</span></span><span class="sig-name descname"><span class="pre">get_bin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ippf</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#src.Modeling.OHModeling.get_bin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.OHModeling.get_data">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.OHModeling.</span></span><span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">,</span> </span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#src.Modeling.OHModeling.get_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.OHModeling.model_oh">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.OHModeling.</span></span><span class="sig-name descname"><span class="pre">model_oh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">train_size</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.Modeling.OHModeling.model_oh" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.OHModeling.months_in_first_period">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.OHModeling.</span></span><span class="sig-name descname"><span class="pre">months_in_first_period</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">month</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#src.Modeling.OHModeling.months_in_first_period" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.OHModeling.train_oh_model">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.OHModeling.</span></span><span class="sig-name descname"><span class="pre">train_oh_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resource</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">features</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">xgboost.sklearn.XGBRegressor</span></span></span><a class="headerlink" href="#src.Modeling.OHModeling.train_oh_model" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.OHModeling.training_data_augmentation">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.OHModeling.</span></span><span class="sig-name descname"><span class="pre">training_data_augmentation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Modeling.OHModeling.training_data_augmentation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-src.Modeling.PAModeling">
+<span id="src-modeling-pamodeling-module"></span><h2>src.Modeling.PAModeling module<a class="headerlink" href="#module-src.Modeling.PAModeling" title="Permalink to this headline">¶</a></h2>
+<p>routine for modeling PA peak production data for time period when not reported monthly</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.PAModeling.add_reporting_period_data">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.PAModeling.</span></span><span class="sig-name descname"><span class="pre">add_reporting_period_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ols_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mp_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Modeling.PAModeling.add_reporting_period_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.PAModeling.apply_and_save_results">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.PAModeling.</span></span><span class="sig-name descname"><span class="pre">apply_and_save_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_to_update_with</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.Modeling.PAModeling.apply_and_save_results" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.PAModeling.compute_reporting_period">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.PAModeling.</span></span><span class="sig-name descname"><span class="pre">compute_reporting_period</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.series.Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reporting_period</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mp_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resource</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#src.Modeling.PAModeling.compute_reporting_period" title="Permalink to this definition">¶</a></dt>
+<dd><p>this is set up to work where reporting period and normalized month start at 0</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.PAModeling.get_data">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.PAModeling.</span></span><span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">,</span> </span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#src.Modeling.PAModeling.get_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.PAModeling.model_pa">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.PAModeling.</span></span><span class="sig-name descname"><span class="pre">model_pa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_features</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.Modeling.PAModeling.model_pa" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.PAModeling.months_in_first_reporting_period">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.PAModeling.</span></span><span class="sig-name descname"><span class="pre">months_in_first_reporting_period</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">month</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#src.Modeling.PAModeling.months_in_first_reporting_period" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.PAModeling.train_pa_model">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.PAModeling.</span></span><span class="sig-name descname"><span class="pre">train_pa_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resource</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">features</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">xgboost.sklearn.XGBRegressor</span></span></span><a class="headerlink" href="#src.Modeling.PAModeling.train_pa_model" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.PAModeling.training_data_augmentation">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.PAModeling.</span></span><span class="sig-name descname"><span class="pre">training_data_augmentation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Modeling.PAModeling.training_data_augmentation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-src.Modeling.XGBoostModel">
+<span id="src-modeling-xgboostmodel-module"></span><h2>src.Modeling.XGBoostModel module<a class="headerlink" href="#module-src.Modeling.XGBoostModel" title="Permalink to this headline">¶</a></h2>
+<p>This file contains modeling utilities, classes, and methods</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.Modeling.XGBoostModel.XGBoostModel">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.Modeling.XGBoostModel.</span></span><span class="sig-name descname"><span class="pre">XGBoostModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">training_input</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">training_labels</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.series.Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">predicting</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">modeling_group</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_date_threshold</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">datetime.date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scoring_metric</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'mae'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">architecture</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tune</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">blend</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">validation_type</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'TimeSeriesSplit'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">retrain</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_xgb_importance</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_auto_tune</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auto_tune_amount</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.Modeling.XGBoostModel.XGBoostModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>XGBoost Model wrapper</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.Modeling.XGBoostModel.XGBoostModel.determine_scoring_metric">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">determine_scoring_metric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">passed_metric</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#src.Modeling.XGBoostModel.XGBoostModel.determine_scoring_metric" title="Permalink to this definition">¶</a></dt>
+<dd><p>provides the model specific verbiage for scoring and evaluation based from generalized input</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>passed_metric</strong> (<em>str</em>) – string determining what type of validation score to use</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>various related terms to the passed string required for each model type</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.Modeling.XGBoostModel.XGBoostModel.fit">
+<span class="sig-name descname"><span class="pre">fit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.series.Series</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.Modeling.XGBoostModel.XGBoostModel.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>fitting model to passed data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>pd.DataFrame</em>) – input features for training model</p></li>
+<li><p><strong>y</strong> (<em>pd.Series</em>) – input labels for training model</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.Modeling.XGBoostModel.XGBoostModel.get_importance_scores">
+<span class="sig-name descname"><span class="pre">get_importance_scores</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Modeling.XGBoostModel.XGBoostModel.get_importance_scores" title="Permalink to this definition">¶</a></dt>
+<dd><p>fit feature scores gathered and returned for reference</p>
+<p>found: <a class="reference external" href="https://stackoverflow.com/questions/37627923/how-to-get-feature-importance-in-xgboost">https://stackoverflow.com/questions/37627923/how-to-get-feature-importance-in-xgboost</a></p>
+<p>‘weight’ - the number of times a feature is used to split the data across all trees.
+‘gain’ - the average gain across all splits the feature is used in.
+‘cover’ - the average coverage across all splits the feature is used in.
+‘total_gain’ - the total gain across all splits the feature is used in.
+‘total_cover’ - the total coverage across all splits the feature is used in.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>pd.DataFrame of all different scores for each feature</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.Modeling.XGBoostModel.XGBoostModel.get_scores">
+<span class="sig-name descname"><span class="pre">get_scores</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#src.Modeling.XGBoostModel.XGBoostModel.get_scores" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns best values of hyper-parameters from tuning</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>best score and best parameters from tuning</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.Modeling.XGBoostModel.XGBoostModel.plot_importance_wrapper">
+<span class="sig-name descname"><span class="pre">plot_importance_wrapper</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fig_size</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">matplotlib.pyplot.plot</span></span></span><a class="headerlink" href="#src.Modeling.XGBoostModel.XGBoostModel.plot_importance_wrapper" title="Permalink to this definition">¶</a></dt>
+<dd><p>wrapper for xgboost.plot_importance() to allow control of plot size</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fig_size</strong> (<em>Tuple</em><em>[</em><em>int</em><em>, </em><em>int</em><em>]</em>) – size of plot to output</p></li>
+<li><p><strong>**kwargs</strong> – additional arguments for plot_importance</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>plot of plot_importance()</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.Modeling.XGBoostModel.XGBoostModel.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">models</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.array</span></span></span><a class="headerlink" href="#src.Modeling.XGBoostModel.XGBoostModel.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>predicts the result of the input utilizing the built model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>pd.DataFrame</em>) – input features for predicting results on</p></li>
+<li><p><strong>models</strong> (<em>list</em>) – optional list of models for ensemble</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>array of predictions from model</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.Modeling.XGBoostModel.XGBoostModel.save_importance_results">
+<span class="sig-name descname"><span class="pre">save_importance_results</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.Modeling.XGBoostModel.XGBoostModel.save_importance_results" title="Permalink to this definition">¶</a></dt>
+<dd><p>Saves the xgb model’s importance results and plots if desired</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.Modeling.XGBoostModel.XGBoostModel.save_model">
+<span class="sig-name descname"><span class="pre">save_model</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.Modeling.XGBoostModel.XGBoostModel.save_model" title="Permalink to this definition">¶</a></dt>
+<dd><p>saving model to passed location</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-src.Modeling.attribute_classification">
+<span id="src-modeling-attribute-classification-module"></span><h2>src.Modeling.attribute_classification module<a class="headerlink" href="#module-src.Modeling.attribute_classification" title="Permalink to this headline">¶</a></h2>
+<p>methods for attribute classification - derived from classifying producing zone by group for DUC wells</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.attribute_classification.classify_by_group">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.attribute_classification.</span></span><span class="sig-name descname"><span class="pre">classify_by_group</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_data_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inference_data_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_attribute</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_attribute</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels_to_ignore</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_columns</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_largest</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Modeling.attribute_classification.classify_by_group" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.attribute_classification.organize_label_data">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.attribute_classification.</span></span><span class="sig-name descname"><span class="pre">organize_label_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_labels</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.series.Series</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span></span></span><a class="headerlink" href="#src.Modeling.attribute_classification.organize_label_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.attribute_classification.prep_group_train_data">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.attribute_classification.</span></span><span class="sig-name descname"><span class="pre">prep_group_train_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_attribute</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_columns</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">labels</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span></span></span><a class="headerlink" href="#src.Modeling.attribute_classification.prep_group_train_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.attribute_classification.prep_inference_group_data">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.attribute_classification.</span></span><span class="sig-name descname"><span class="pre">prep_inference_group_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inference_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_attribute</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input_columns</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">,</span> </span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#src.Modeling.attribute_classification.prep_inference_group_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.attribute_classification.process_probability_results">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.attribute_classification.</span></span><span class="sig-name descname"><span class="pre">process_probability_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">proba_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">known_label_dict</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label_attribute</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_largest</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Modeling.attribute_classification.process_probability_results" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.attribute_classification.pull_n_largest_results">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.attribute_classification.</span></span><span class="sig-name descname"><span class="pre">pull_n_largest_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">proba_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_largest</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Modeling.attribute_classification.pull_n_largest_results" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-src.Modeling.depletion_computing">
+<span id="src-modeling-depletion-computing-module"></span><h2>src.Modeling.depletion_computing module<a class="headerlink" href="#module-src.Modeling.depletion_computing" title="Permalink to this headline">¶</a></h2>
+<p>This file contains various functions that drive the depletion factor attributes</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.depletion_computing.assign_slope_bin">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.depletion_computing.</span></span><span class="sig-name descname"><span class="pre">assign_slope_bin</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bearing</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#src.Modeling.depletion_computing.assign_slope_bin" title="Permalink to this definition">¶</a></dt>
+<dd><p>assigns bin to bearing</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>bearing</strong> (<em>float</em>) – compass bearing to bin</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>char stating what group the bearing is in</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.depletion_computing.bearing_bounds">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.depletion_computing.</span></span><span class="sig-name descname"><span class="pre">bearing_bounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_array</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">22.5</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.array</span></span></span><a class="headerlink" href="#src.Modeling.depletion_computing.bearing_bounds" title="Permalink to this definition">¶</a></dt>
+<dd><p>provides a mask of bounds that are within a delta of or 180 deg +- delta</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>float</em>) – bearing to provide mask around</p></li>
+<li><p><strong>y_array</strong> (<em>np.array</em>) – bearings of surrounding wells to test bounding</p></li>
+<li><p><strong>delta</strong> (<em>float</em>) – difference in bearing in degrees</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Returns :</dt><dd><p>array of boolean values dictating of the associated well has a bearing close to the given bound x</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.depletion_computing.calculate_initial_compass_bearing">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.depletion_computing.</span></span><span class="sig-name descname"><span class="pre">calculate_initial_compass_bearing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">point_a</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">point_b</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#src.Modeling.depletion_computing.calculate_initial_compass_bearing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates the bearing between two points.
+The formulae used is the following:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>θ = atan2(sin(Δlong).cos(lat2),</dt><dd><p>cos(lat1).sin(lat2) − sin(lat1).cos(lat2).cos(Δlong))</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>point_a</strong> (<em>np.ndarray</em>) – The 2-d array representing the latitude/longitude for the
+first points. Latitude and longitude must be in decimal degrees</p></li>
+<li><p><strong>point_b</strong> (<em>np.ndarray</em>) – The 2-d array representing the latitude/longitude for the
+second points. Latitude and longitude must be in decimal degrees</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The bearings in degrees</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.depletion_computing.compute_coordinate">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.depletion_computing.</span></span><span class="sig-name descname"><span class="pre">compute_coordinate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">actual_depth</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">est_depth_upper_bound</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">est_depth_lower_bound</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coordinate_est_upper_bound</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coordinate_est_lower_bound</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.array</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.array</span></span></span><a class="headerlink" href="#src.Modeling.depletion_computing.compute_coordinate" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculates the actual coordinate value of a perforation</p>
+<p>based off the relationship of the known depth and coordinates of the two closest survey datum</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>actual_depth</strong> (<em>np.array</em>) – actual depth of point trying to locate</p></li>
+<li><p><strong>est_depth_upper_bound</strong> (<em>np.array</em>) – estimated upper bound depth - used for relation to actual</p></li>
+<li><p><strong>est_depth_lower_bound</strong> (<em>np.array</em>) – estimated lower bound depth - used for relation to actual</p></li>
+<li><p><strong>coordinate_est_upper_bound</strong> (<em>np.array</em>) – upper bound estimate of actual coordinate value</p></li>
+<li><p><strong>coordinate_est_lower_bound</strong> (<em>np.array</em>) – lower bound estimate of actual coordinate value</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>interpolated actual coordinate value</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.depletion_computing.compute_depletion_factors">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.depletion_computing.</span></span><span class="sig-name descname"><span class="pre">compute_depletion_factors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.series.Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sub_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">monthly_production_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance_measures</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.series.Series</span></span></span><a class="headerlink" href="#src.Modeling.depletion_computing.compute_depletion_factors" title="Permalink to this definition">¶</a></dt>
+<dd><p>suite that applies the computes of depletion factors to a row of the dataframe</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>row</strong> (<em>ols_df.Series</em>) – row of well data that is processed appropriately</p></li>
+<li><p><strong>(</strong><strong>ols_df.DataFrame</strong> (<em>sub_df</em>) – dataframe containing neighbors of the row well</p></li>
+<li><p><strong>monthly_production_df</strong> (<em>ols_df.DatFrame</em>) – monthly production</p></li>
+<li><p><strong>distance_measures</strong> (<em>list</em>) – distance values to compute depletion for neighboring wells on row’s well</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>row with added depletion values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.depletion_computing.compute_distance_and_overlap_length">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.depletion_computing.</span></span><span class="sig-name descname"><span class="pre">compute_distance_and_overlap_length</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spatial</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logic</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#src.Modeling.depletion_computing.compute_distance_and_overlap_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>computes distance and overlap lengths between the two wells in question</p>
+<p>————— Key of spectral_dict abbreviations —————</p>
+<p>—————————– level 0 —————————–</p>
+<p>P - Primary well</p>
+<p>O - Offset well</p>
+<p>—————————– level 1 —————————–</p>
+<p>N - North</p>
+<p>S - South</p>
+<p>M - Slope</p>
+<p>O - Orthogonal slope</p>
+<p>L - length of well’s lateral in feet</p>
+<p>—————————– level 2 —————————–</p>
+<p>X - x axis value in feet</p>
+<p>Y - y axis value in feet</p>
+<p>Long - longitudinal value</p>
+<p>Lat - latitudinal value</p>
+<p>P - orthogonal projection on other well</p>
+<p>—————————– level 3 —————————–</p>
+<p>X - x axis value in feed of orthogonal projection</p>
+<p>Y - y axis value in feet of orthogonal projection</p>
+<p>————————— logic_dict —————————-</p>
+<dl class="simple">
+<dt>‘check_1’: (min(spatial[‘O’][‘S’][‘X’], spatial[‘O’][‘N’][‘X’]) &lt;= spatial[‘P’][‘S’][‘P’][‘X’] &lt;= max(</dt><dd><p>spatial[‘O’][‘S’][‘X’], spatial[‘O’][‘N’][‘X’])),</p>
+</dd>
+<dt>‘check_2’: (min(spatial[‘O’][‘S’][‘Y’], spatial[‘O’][‘N’][‘Y’]) &lt;= spatial[‘P’][‘S’][‘P’][‘Y’] &lt;= max(</dt><dd><p>spatial[‘O’][‘S’][‘Y’], spatial[‘O’][‘N’][‘Y’])),</p>
+</dd>
+<dt>‘check_3’: (min(spatial[‘O’][‘S’][‘X’], spatial[‘O’][‘N’][‘X’]) &lt;= spatial[‘P’][‘N’][‘P’][‘X’] &lt;= max(</dt><dd><p>spatial[‘O’][‘S’][‘X’], spatial[‘O’][‘N’][‘X’])),</p>
+</dd>
+<dt>‘check_4’: (min(spatial[‘O’][‘S’][‘Y’], spatial[‘O’][‘N’][‘Y’]) &lt;= spatial[‘P’][‘N’][‘P’][‘Y’] &lt;= max(</dt><dd><p>spatial[‘O’][‘S’][‘Y’], spatial[‘O’][‘N’][‘Y’])),</p>
+</dd>
+<dt>‘check_5’: (min(spatial[‘P’][‘S’][‘X’], spatial[‘P’][‘N’][‘X’]) &lt;= spatial[‘O’][‘S’][‘P’][‘X’] &lt;= max(</dt><dd><p>spatial[‘P’][‘S’][‘X’], spatial[‘P’][‘N’][‘X’])),</p>
+</dd>
+<dt>‘check_6’: (min(spatial[‘P’][‘S’][‘Y’], spatial[‘P’][‘N’][‘Y’]) &lt;= spatial[‘O’][‘S’][‘P’][‘Y’] &lt;= max(</dt><dd><p>spatial[‘P’][‘S’][‘Y’], spatial[‘P’][‘N’][‘Y’])),</p>
+</dd>
+<dt>‘check_7’: (min(spatial[‘P’][‘S’][‘X’], spatial[‘P’][‘N’][‘X’]) &lt;= spatial[‘O’][‘N’][‘P’][‘X’] &lt;= max(</dt><dd><p>spatial[‘P’][‘S’][‘X’], spatial[‘P’][‘N’][‘X’])),</p>
+</dd>
+<dt>‘check_8’: (min(spatial[‘P’][‘S’][‘Y’], spatial[‘P’][‘N’][‘Y’]) &lt;= spatial[‘O’][‘N’][‘P’][‘Y’] &lt;= max(</dt><dd><p>spatial[‘P’][‘S’][‘Y’], spatial[‘P’][‘N’][‘Y’]))</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>spatial</strong> (<em>dict</em>) – spatial data of the two well’s points</p></li>
+<li><p><strong>logic</strong> (<em>dict</em>) – checks between two well’s which drives how the avg_2d_distance and overlap_length are computed</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the average 2-d distance between the two well’s laterals, and the perpendicular-to-lateral overlap length</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.depletion_computing.convert_coordinates_to_feet">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.depletion_computing.</span></span><span class="sig-name descname"><span class="pre">convert_coordinates_to_feet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">first_lat</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">second_lat</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first_long</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">second_long</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">negative</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#src.Modeling.depletion_computing.convert_coordinates_to_feet" title="Permalink to this definition">¶</a></dt>
+<dd><p>converts coordinate to footage</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>first_lat</strong> (<em>float</em>) – first point’s latitude</p></li>
+<li><p><strong>second_lat</strong> (<em>float</em>) – second point’s latitude</p></li>
+<li><p><strong>first_long</strong> (<em>float</em>) – first point’s longitude</p></li>
+<li><p><strong>second_long</strong> (<em>float</em>) – second point’s longitude</p></li>
+<li><p><strong>negative</strong> (<em>bool</em>) – whether to return the footage as negative</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>footage conversion of coordinate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.depletion_computing.cumulative_value">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.depletion_computing.</span></span><span class="sig-name descname"><span class="pre">cumulative_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resources</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#src.Modeling.depletion_computing.cumulative_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>computes the cumulative value of a given resource for the passed dataframe</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pd.DataFrame</em>) – dataframe to pull wells from</p></li>
+<li><p><strong>resources</strong> (<em>tuple</em>) – specify ‘Oil’ and ‘Gas’ to calculate value</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the cumulative values for oil and gas in the passed dataframe</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.depletion_computing.decode_neighbors">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.depletion_computing.</span></span><span class="sig-name descname"><span class="pre">decode_neighbors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">neighborhood_string</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#src.Modeling.depletion_computing.decode_neighbors" title="Permalink to this definition">¶</a></dt>
+<dd><p>decodes encoded neighborhood of api’s that are ‘,’ delimited</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>neighborhood_string</strong> (<em>str</em>) – encoded neighbor api’s in dataframe ‘##############,##############,##############’</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a list of api’s that are str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.depletion_computing.depletion_factor">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.depletion_computing.</span></span><span class="sig-name descname"><span class="pre">depletion_factor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_group</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance_measures</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">apis</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">distributed.client.Client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recompute</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_parallel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_format</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">14</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.Modeling.depletion_computing.depletion_factor" title="Permalink to this definition">¶</a></dt>
+<dd><p>this is a suite for the depletion factor computations for all wells that have data in each dataset</p>
+<p>Computes multiple fields with regards to legacy nearby neighbor wells</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_group</strong> (<a class="reference internal" href="src.Data.html#src.Data.ModelGroup.ModelGroup" title="src.Data.ModelGroup.ModelGroup"><em>ModelGroup</em></a>) – group of wells to compute depletion factors for</p></li>
+<li><p><strong>data_path</strong> (<em>Path</em>) – location of data on disk</p></li>
+<li><p><strong>distance_measures</strong> (<em>list</em>) – list of ints providing the distances for depletion to be calculated for</p></li>
+<li><p><strong>apis</strong> (<em>np.ndarray</em>) – list of api’s for group</p></li>
+<li><p><strong>client</strong> (<em>distributed.Client</em>) – scheduler for dask parallelization</p></li>
+<li><p><strong>recompute</strong> (<em>bool</em>) – controls whether the depletion data is recomputed or not</p></li>
+<li><p><strong>in_parallel</strong> (<em>bool</em>) – controls whether some computations are done using dask or pandas</p></li>
+<li><p><strong>api_format</strong> (<em>int</em>) – api format to use for indexing data</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.depletion_computing.distance_between_points">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.depletion_computing.</span></span><span class="sig-name descname"><span class="pre">distance_between_points</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">s_lat</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">s_lng</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e_lat</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">e_lng</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#src.Modeling.depletion_computing.distance_between_points" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculates 2-d distance between two wells</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>s_lat</strong> (<em>float</em>) – starting well’s mid perforation latitude value</p></li>
+<li><p><strong>s_lng</strong> (<em>float</em>) – starting well’s mid perforation longitude value</p></li>
+<li><p><strong>e_lat</strong> (<em>float</em>) – ending well’s mid perforation latitude value</p></li>
+<li><p><strong>e_lng</strong> (<em>float</em>) – ending well’s mid perforation longitude value</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>feet between two points</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.depletion_computing.find_nearest_neighbors">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.depletion_computing.</span></span><span class="sig-name descname"><span class="pre">find_nearest_neighbors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.series.Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sub_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.series.Series</span></span></span><a class="headerlink" href="#src.Modeling.depletion_computing.find_nearest_neighbors" title="Permalink to this definition">¶</a></dt>
+<dd><p>lambda function that fills in the ‘Neighbors’ field of a well’s information</p>
+<p>neighbors are saved in a str that have ‘,’ as a delimiter between api codes so that the data can be stored in ols_df</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>row</strong> (<em>pd.Series</em>) – row that is the prospective well in question</p></li>
+<li><p><strong>sub_df</strong> (<em>pd.DataFrame</em>) – rows of wells that started producing before this well started producing</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a row of data that now contains the neighbors field filled out if the well has any neighbors</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.depletion_computing.find_nearest_trajectory_records">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.depletion_computing.</span></span><span class="sig-name descname"><span class="pre">find_nearest_trajectory_records</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">measured_depths</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.series.Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">depth_to_approximate</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#src.Modeling.depletion_computing.find_nearest_trajectory_records" title="Permalink to this definition">¶</a></dt>
+<dd><p>retrieves the index values of the 2 nearest values of measured depth on a lateral</p>
+<p>if a point past the depth is not found, then the base of the trajectory is used for interpolation</p>
+<p>if a point before the depth is not found, then the end of the trajectory is used for interpolation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>measured_depths</strong> (<em>pd.Series</em>) – all measured depths associated with well</p></li>
+<li><p><strong>depth_to_approximate</strong> (<em>float</em>) – value of drilled depth that needs to be approximated</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>index values of the trajectory dataset that have upper and lower bounds of the coordinate value</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.depletion_computing.generate_bearing_bounds">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.depletion_computing.</span></span><span class="sig-name descname"><span class="pre">generate_bearing_bounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_array</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">delta</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">numpy.array</span></span></span><a class="headerlink" href="#src.Modeling.depletion_computing.generate_bearing_bounds" title="Permalink to this definition">¶</a></dt>
+<dd><p>provides a mask of bounds that are within a delta of or 180 deg +- delta</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>float</em>) – bearing to provide mask around</p></li>
+<li><p><strong>y_array</strong> (<em>np.array</em>) – bearings of surrounding wells to test bounding</p></li>
+<li><p><strong>delta</strong> (<em>float</em>) – difference in bearing in degrees</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Returns :</dt><dd><p>array of boolean values dictating of the associated well has a bearing close to the given bound x</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.depletion_computing.generate_coordinate_bounds_of_well">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.depletion_computing.</span></span><span class="sig-name descname"><span class="pre">generate_coordinate_bounds_of_well</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">well_of_interest</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.series.Series</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#src.Modeling.depletion_computing.generate_coordinate_bounds_of_well" title="Permalink to this definition">¶</a></dt>
+<dd><p>this generates a bounding box of coordinates around the well of interest that is 5000 feet out from the extreme
+of each direction</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>well_of_interest</strong> (<em>pd.Series</em>) – data of well containing the three point’s coordinates</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Returns (dict):</dt><dd><p>dictionary of coordinate minimums and maximums 5000 feet around well of interest</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.depletion_computing.generate_footage_values">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.depletion_computing.</span></span><span class="sig-name descname"><span class="pre">generate_footage_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">primary_well</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.series.Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_well</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.series.Series</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#src.Modeling.depletion_computing.generate_footage_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>computes the spatial values of the wells in a coordinate space mapping into feet with the southern-most
+end of the primary well as the origin of the mapping</p>
+<p>————— Key of spectral_dict abbreviations —————</p>
+<p>—————————– level 0 —————————–</p>
+<p>P - Primary well</p>
+<p>O - Offset well</p>
+<p>—————————– level 1 —————————–</p>
+<p>N - North</p>
+<p>S - South</p>
+<p>M - Slope</p>
+<p>O - Orthogonal slope</p>
+<p>L - length of well’s lateral in feet</p>
+<p>—————————– level 2 —————————–</p>
+<p>X - x axis value in feet</p>
+<p>Y - y axis value in feet</p>
+<p>Long - longitudinal value</p>
+<p>Lat - latitudinal value</p>
+<p>P - orthogonal projection on other well</p>
+<p>—————————– level 3 —————————–</p>
+<p>X - x axis value in feed of orthogonal projection</p>
+<p>Y - y axis value in feet of orthogonal projection</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>primary_well</strong> (<em>pd.Series</em>) – primary well’s row of data from the calling dataframe</p></li>
+<li><p><strong>offset_well</strong> (<em>pd.Series</em>) – offset well’s row of data from the calling dataframe</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dict of spatial data for the primary and offset wells in the structure that is defined above</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.depletion_computing.generate_overlap_well_framing">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.depletion_computing.</span></span><span class="sig-name descname"><span class="pre">generate_overlap_well_framing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">well</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.series.Series</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#src.Modeling.depletion_computing.generate_overlap_well_framing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine which point goes where in translation</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>well</strong> (<em>pd.Series</em>) – well’s row of data containing perf lat/long coordinates</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>mapping ends of laterals to north-most and south-most coordinate</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.depletion_computing.interpolate_coordinates">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.depletion_computing.</span></span><span class="sig-name descname"><span class="pre">interpolate_coordinates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row_of_one_line_summary</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.series.Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trajectory_sub_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.series.Series</span></span></span><a class="headerlink" href="#src.Modeling.depletion_computing.interpolate_coordinates" title="Permalink to this definition">¶</a></dt>
+<dd><p>interpolating the coordinate values of upper, middle, and Lower Perforation points on a given well</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>row_of_one_line_summary</strong> (<em>pd.Series</em>) – </p></li>
+<li><p><strong>trajectory_sub_df</strong> (<em>pd.DataFrame</em>) – trajectory data that corresponds to the row_of_one_summary</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a row that contains interpolated coordinates of the upper, middle, and Lower Perforation points</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.depletion_computing.interpolate_trajectoried_wells">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.depletion_computing.</span></span><span class="sig-name descname"><span class="pre">interpolate_trajectoried_wells</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ols_traj_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">traj_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">client</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">distributed.client.Client</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">in_parallel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Modeling.depletion_computing.interpolate_trajectoried_wells" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ols_traj_df</strong> (<em>pd.DataFrame</em>) – one line summary trajectory data</p></li>
+<li><p><strong>traj_df</strong> (<em>pd.DataFrame</em>) – trajectory data</p></li>
+<li><p><strong>client</strong> (<em>distributed.client</em>) – parallel client</p></li>
+<li><p><strong>in_parallel</strong> (<em>bool</em>) – whether to compute in parallel</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>interpolated trajectory data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.depletion_computing.interpolate_wells_missing_trajectories">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.depletion_computing.</span></span><span class="sig-name descname"><span class="pre">interpolate_wells_missing_trajectories</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ols_no_traj_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ic_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_format</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Modeling.depletion_computing.interpolate_wells_missing_trajectories" title="Permalink to this definition">¶</a></dt>
+<dd><p>computes the coordinates and lateral length for wells without trajectory data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ols_no_traj_df</strong> (<em>pd.DataFrame</em>) – one line summary data without trajectory data matching</p></li>
+<li><p><strong>ic_df</strong> (<em>pd.DataFrame</em>) – data with trajectory data</p></li>
+<li><p><strong>api_format</strong> (<em>int</em>) – what api format to use for indexing</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>interpolated features</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.depletion_computing.load_cached_data">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.depletion_computing.</span></span><span class="sig-name descname"><span class="pre">load_cached_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_information</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#src.Modeling.depletion_computing.load_cached_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>loads cached data from file if there</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_information</strong> (<em>Path</em>) – location of file to load</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>cached results if they exist</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.depletion_computing.load_depletion_data">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.depletion_computing.</span></span><span class="sig-name descname"><span class="pre">load_depletion_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_group</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">apis</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recompute</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_format</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">14</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower_date_threshold</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">datetime.date</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">datetime.date(2012,</span> <span class="pre">1,</span> <span class="pre">1)</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">,</span> </span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">,</span> </span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">,</span> </span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">,</span> </span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">,</span> </span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">,</span> </span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#src.Modeling.depletion_computing.load_depletion_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>reads in data from disk.</p>
+<p>If parquet.gzip is not found of file, then csv version is read, processed, then saved as parquet.gzip</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>model_group</strong> (<a class="reference internal" href="src.Data.html#src.Data.ModelGroup.ModelGroup" title="src.Data.ModelGroup.ModelGroup"><em>ModelGroup</em></a>) – group to load data from</p></li>
+<li><p><strong>data_path</strong> (<em>Path</em>) – path to data on disk</p></li>
+<li><p><strong>apis</strong> (<em>np.ndarray</em>) – list of api’s in group</p></li>
+<li><p><strong>recompute</strong> (<em>bool</em>) – flag on whether to ignore cached data</p></li>
+<li><p><strong>api_format</strong> (<em>int</em>) – length of api to use for indexing data</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>trajectory, one line summary, and monthly production data sets from storage</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.depletion_computing.load_monthly_data">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.depletion_computing.</span></span><span class="sig-name descname"><span class="pre">load_monthly_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_information</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Modeling.depletion_computing.load_monthly_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>reads in monthly data</p>
+<dl class="simple">
+<dt>If parquet data not found, then csv file is read in</dt><dd><p>api values are processed and set as the index
+monthly production date is converted to datetime
+saved as a parquet file</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_information</strong> (<em>dict</em>) – dict containing the location of ‘parquet’ file, ‘xlsx’ files, and ‘columns’ to read in</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dataframe of read data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.depletion_computing.load_one_line_summary_data">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.depletion_computing.</span></span><span class="sig-name descname"><span class="pre">load_one_line_summary_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_information</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Modeling.depletion_computing.load_one_line_summary_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>reads in one line summary data</p>
+<dl class="simple">
+<dt>If parquet data not found, then csv file is read in</dt><dd><p>api values are processed and set as the index
+tvd na’s are dropped
+radius calculation is done
+saved as a parquet file</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_information</strong> (<em>dict</em>) – dict containing the location of ‘parquet’ file, ‘xlsx’ files, and ‘columns’ to read in</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dataframe of read data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.depletion_computing.load_permit_data">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.depletion_computing.</span></span><span class="sig-name descname"><span class="pre">load_permit_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_information</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ols_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">date</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'2020-10-28'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_wells</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_format</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">14</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Modeling.depletion_computing.load_permit_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>loads permit data if provided, else makes fabricated data from ols file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file_information</strong> (<em>dict</em>) – file locations to load from</p></li>
+<li><p><strong>ols_df</strong> (<em>pd.DataFrame</em>) – one line summary data</p></li>
+<li><p><strong>date</strong> (<em>str</em>) – date to assign as permit data start</p></li>
+<li><p><strong>num_wells</strong> (<em>int</em>) – number of wells to sample</p></li>
+<li><p><strong>api_format</strong> (<em>int</em>) – what api style to index on</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>sampled or provided permit data for predicting</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.depletion_computing.load_trajectory_data">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.depletion_computing.</span></span><span class="sig-name descname"><span class="pre">load_trajectory_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_information</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Modeling.depletion_computing.load_trajectory_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>reads in trajectory data</p>
+<dl class="simple">
+<dt>If parquet data not found, then csv files with pattern <a href="#id1"><span class="problematic" id="id2">**</span></a><a href="#id3"><span class="problematic" id="id4">**</span></a>WellboreTrajectory.csv are read in</dt><dd><p>api values are processed and set as the index
+saved as a parquet file</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_information</strong> (<em>dict</em>) – dict containing the location of ‘parquet’, ‘multiple_csv’ and ‘columns’ to read in</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dataframe of read data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.depletion_computing.overlap">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.depletion_computing.</span></span><span class="sig-name descname"><span class="pre">overlap</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">primary_well</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.series.Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset_well</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.series.Series</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">three_dimensions</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">,</span> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#src.Modeling.depletion_computing.overlap" title="Permalink to this definition">¶</a></dt>
+<dd><p>Suite to calculate the depletion factor (%) of cum to attribute as a function of distance</p>
+<p>————— Key of spectral_dict abbreviations —————</p>
+<p>—————————– level 0 —————————–</p>
+<p>P - Primary well</p>
+<p>O - Offset well</p>
+<p>—————————– level 1 —————————–</p>
+<p>N - North</p>
+<p>S - South</p>
+<p>M - Slope</p>
+<p>O - Orthogonal slope</p>
+<p>L - length of well’s lateral in feet</p>
+<p>—————————– level 2 —————————–</p>
+<p>X - x axis value in feet</p>
+<p>Y - y axis value in feet</p>
+<p>Long - longitudinal value</p>
+<p>Lat - latitudinal value</p>
+<p>P - orthogonal projection on other well</p>
+<p>—————————– level 3 —————————–</p>
+<p>X - x axis value in feed of orthogonal projection</p>
+<p>Y - y axis value in feet of orthogonal projection</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>primary_well</strong> (<em>pd.Series</em>) – row of data for primary well</p></li>
+<li><p><strong>offset_well</strong> (<em>pd.Series</em>) – row of data for offset well</p></li>
+<li><p><strong>three_dimensions</strong> (<em>bool</em>) – whether to compute distance in 2 or 3 dimensions</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>distance between two wells, and the overlap fraction</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.depletion_computing.overlap_logic">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.depletion_computing.</span></span><span class="sig-name descname"><span class="pre">overlap_logic</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spatial</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#src.Modeling.depletion_computing.overlap_logic" title="Permalink to this definition">¶</a></dt>
+<dd><p>defines logical relationship between spatial relationships provided</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>spatial</strong> (<em>dict</em>) – spatial data to create logic from</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>logical relationships for deletion based on spatial input</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.depletion_computing.point_distance_2d">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.depletion_computing.</span></span><span class="sig-name descname"><span class="pre">point_distance_2d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x2</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y1</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y2</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">float</span></span></span><a class="headerlink" href="#src.Modeling.depletion_computing.point_distance_2d" title="Permalink to this definition">¶</a></dt>
+<dd><p>computes 2d point distance</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x1</strong> (<em>float</em>) – first point x value</p></li>
+<li><p><strong>x2</strong> (<em>float</em>) – second point x value</p></li>
+<li><p><strong>y1</strong> (<em>float</em>) – first point y value</p></li>
+<li><p><strong>y2</strong> (<em>float</em>) – second point y value</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>distance between two points in 2 dimensions</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.depletion_computing.well_coordinates_within_area">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.depletion_computing.</span></span><span class="sig-name descname"><span class="pre">well_coordinates_within_area</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bounds_of_well</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">other_well</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.series.Series</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#src.Modeling.depletion_computing.well_coordinates_within_area" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines if any of the upper, middle, and Lower Perforation points of the ‘other_well’ are within the bounds</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>bounds_of_well</strong> (<em>dict</em>) – {‘latitude’: (min, max), ‘longitude’: (min, max), ‘radius’: (min, max)}</p></li>
+<li><p><strong>other_well</strong> (<em>pd.Series</em>) – well data to check points of</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Returns (bool):</dt><dd><p>returns whether the other well is in the area of the well of interest</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-src.Modeling.modeling_flow_paths">
+<span id="src-modeling-modeling-flow-paths-module"></span><h2>src.Modeling.modeling_flow_paths module<a class="headerlink" href="#module-src.Modeling.modeling_flow_paths" title="Permalink to this headline">¶</a></h2>
+<p>This file contains different methods for modeling flow</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.modeling_flow_paths.build_result_df">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.modeling_flow_paths.</span></span><span class="sig-name descname"><span class="pre">build_result_df</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_dict</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">models</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataset</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Modeling.modeling_flow_paths.build_result_df" title="Permalink to this definition">¶</a></dt>
+<dd><p>generates a dataframe containing predictions from the models</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_dict</strong> (<em>dict</em>) – data container that contains all data</p></li>
+<li><p><strong>models</strong> (<em>dict</em>) – container of models to predict with</p></li>
+<li><p><strong>dataset</strong> (<em>str</em>) – ‘train’ or ‘test’ to key what data to use</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>pd.DataFrame of results from both training and testing data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.modeling_flow_paths.gather_result_df">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.modeling_flow_paths.</span></span><span class="sig-name descname"><span class="pre">gather_result_df</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_dict</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">models</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Modeling.modeling_flow_paths.gather_result_df" title="Permalink to this definition">¶</a></dt>
+<dd><p>generates a dataframe containing predictions from the models</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_dict</strong> (<em>dict</em>) – data container that contains all data</p></li>
+<li><p><strong>models</strong> (<em>dict</em>) – container of models to predict with</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>pd.DataFrame of results from both training and testing data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.modeling_flow_paths.get_producing_zones">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.modeling_flow_paths.</span></span><span class="sig-name descname"><span class="pre">get_producing_zones</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span></span></span><a class="headerlink" href="#src.Modeling.modeling_flow_paths.get_producing_zones" title="Permalink to this definition">¶</a></dt>
+<dd><p>utility that returns the unique producing zone entries found in the ols file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>data_path</strong> (<em>Path</em>) – location of data head in system</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>list of unique producing zone names found</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Modeling.modeling_flow_paths.model_producing_zones">
+<span class="sig-prename descclassname"><span class="pre">src.Modeling.modeling_flow_paths.</span></span><span class="sig-name descname"><span class="pre">model_producing_zones</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">datetime.date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">datetime.date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frequency</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">additional_features</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">recompute_krig</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.Modeling.modeling_flow_paths.model_producing_zones" title="Permalink to this definition">¶</a></dt>
+<dd><p>wrapper of modeling_through_time which queues modeling of all producing zones for Oil and Gas</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_path</strong> (<em>Path</em>) – location of data head in system</p></li>
+<li><p><strong>start_date</strong> (<em>date</em>) – earliest date to consider data for training</p></li>
+<li><p><strong>end_date</strong> (<em>date</em>) – latest date to consider for training/testing</p></li>
+<li><p><strong>frequency</strong> (<em>int</em>) – number of months in the window of training/testing</p></li>
+<li><p><strong>additional_features</strong> (<em>list</em>) – str values of additional features inputs for modeling</p></li>
+<li><p><strong>recompute_krig</strong> (<em>bool</em>) – whether to recompute krig for wells that have already been computed for</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-src.Modeling">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-src.Modeling" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="src.Plotting.html" class="btn btn-neutral float-right" title="src.Plotting package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="src.Logging.html" class="btn btn-neutral float-left" title="src.Logging package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Joshua Embry.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
