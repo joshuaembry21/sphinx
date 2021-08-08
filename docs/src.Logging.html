@@ -1,0 +1,496 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>src.Logging package &mdash; IPPF  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="src.Modeling package" href="src.Modeling.html" />
+    <link rel="prev" title="src.Economics package" href="src.Economics.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> IPPF
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="readme.html">North By Northwest - Initial Production Prediction Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html#requirements">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html#usage">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="onboarding.html">Onboarding</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Initial_Production_Prediction_Model</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cli_data_access.html">cli-data_access module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli_data_ingestion.html">cli-data_ingestion module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli_krig.html">cli-krig module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli_modeling.html">cli-modeling module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli_production_factor_analysis.html">cli-production_factor_analysis module</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="src.html">src package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="src.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="src.Data.html">src.Data package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.Economics.html">src.Economics package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">src.Logging package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.Modeling.html">src.Modeling package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.Plotting.html">src.Plotting package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.ProductionFactor.html">src.ProductionFactor package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.html#module-src">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html">tests package</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">IPPF</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">Initial_Production_Prediction_Model</a> &raquo;</li>
+        
+          <li><a href="src.html">src package</a> &raquo;</li>
+        
+      <li>src.Logging package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/src.Logging.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="src-logging-package">
+<h1>src.Logging package<a class="headerlink" href="#src-logging-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-src.Logging.exceptions">
+<span id="src-logging-exceptions-module"></span><h2>src.Logging.exceptions module<a class="headerlink" href="#module-src.Logging.exceptions" title="Permalink to this headline">¶</a></h2>
+<p>This file contains custom exceptions defined for logging</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="src.Logging.exceptions.NoData">
+<em class="property"><span class="pre">exception</span> </em><span class="sig-prename descclassname"><span class="pre">src.Logging.exceptions.</span></span><span class="sig-name descname"><span class="pre">NoData</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.Logging.exceptions.NoData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-src.Logging.log_exploration">
+<span id="src-logging-log-exploration-module"></span><h2>src.Logging.log_exploration module<a class="headerlink" href="#module-src.Logging.log_exploration" title="Permalink to this headline">¶</a></h2>
+<p>this file holds methods for processing logs into pd.DataFrame data</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Logging.log_exploration.combine_log_messages">
+<span class="sig-prename descclassname"><span class="pre">src.Logging.log_exploration.</span></span><span class="sig-name descname"><span class="pre">combine_log_messages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Logging.log_exploration.combine_log_messages" title="Permalink to this definition">¶</a></dt>
+<dd><p>combines log messages that took up multiple lines in the log file</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>df</strong> (<em>pd.DataFrame</em>) – log data that contains log messages</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>log data with messages that spanned multiple lines combined into a single entry</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Logging.log_exploration.connect_child_logs">
+<span class="sig-prename descclassname"><span class="pre">src.Logging.log_exploration.</span></span><span class="sig-name descname"><span class="pre">connect_child_logs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_orphans</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Logging.log_exploration.connect_child_logs" title="Permalink to this definition">¶</a></dt>
+<dd><p>references logs that are not genesis logs to their genesis entry</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pd.DataFrame</em>) – log data to process</p></li>
+<li><p><strong>remove_orphans</strong> (<em>bool</em>) – whether to remove logs with no genesis log</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>log data where all entries have genesis entries</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Logging.log_exploration.delineate_proprietary_code">
+<span class="sig-prename descclassname"><span class="pre">src.Logging.log_exploration.</span></span><span class="sig-name descname"><span class="pre">delineate_proprietary_code</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Logging.log_exploration.delineate_proprietary_code" title="Permalink to this definition">¶</a></dt>
+<dd><p>utility which differentiates if a log message is from a proprietary module or open source code</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>df</strong> (<em>pd.DataFrame</em>) – log data to process</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>log data with a notation for each log noting if the log belongs to proprietary code or not</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Logging.log_exploration.find_and_assign_model_scores">
+<span class="sig-prename descclassname"><span class="pre">src.Logging.log_exploration.</span></span><span class="sig-name descname"><span class="pre">find_and_assign_model_scores</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Logging.log_exploration.find_and_assign_model_scores" title="Permalink to this definition">¶</a></dt>
+<dd><p>suite which identifies which logs to target for modeling scores, then assigns those findings to the modeling run</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>df</strong> (<em>pd.DataFrame</em>) – log data to process</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>log data with added model scores as features if found</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Logging.log_exploration.find_and_assign_substring_data">
+<span class="sig-prename descclassname"><span class="pre">src.Logging.log_exploration.</span></span><span class="sig-name descname"><span class="pre">find_and_assign_substring_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">feature_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log_message_start</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute_pattern</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">re.Pattern</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Logging.log_exploration.find_and_assign_substring_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>utility locates and assigns attributes to a given modeling run based off passed configuration</p>
+<p>information is identified in a given message and is assigned as a feature to all logs that are in the same model run</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pd.DataFrame</em>) – log data to process</p></li>
+<li><p><strong>feature_name</strong> (<em>str</em>) – name of feature to add</p></li>
+<li><p><strong>log_message_start</strong> (<em>str</em>) – substring to search for in a given log message</p></li>
+<li><p><strong>attribute_pattern</strong> (<em>re.Pattern</em>) – pattern to search identified messages with</p></li>
+<li><p><strong>group</strong> (<em>int</em>) – group if pattern to pull data from</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>log data with added feature specified in passed arguments</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Logging.log_exploration.find_genesis_logs">
+<span class="sig-prename descclassname"><span class="pre">src.Logging.log_exploration.</span></span><span class="sig-name descname"><span class="pre">find_genesis_logs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Logging.log_exploration.find_genesis_logs" title="Permalink to this definition">¶</a></dt>
+<dd><p>finds the beginning of a cli-modeling.py run</p>
+<p>NOTE - only works for runs that are not through time</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>df</strong> (<em>pd.DataFrame</em>) – log data to process</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>log data with the beginning of a given run notated</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Logging.log_exploration.get_model_score_data">
+<span class="sig-prename descclassname"><span class="pre">src.Logging.log_exploration.</span></span><span class="sig-name descname"><span class="pre">get_model_score_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pattern</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">re.Pattern</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">re.compile('Modeling</span> <span class="pre">Scores</span> <span class="pre">-</span> <span class="pre">([a-zA-Z]+)</span> <span class="pre">-</span> <span class="pre">Model:</span> <span class="pre">([^\\-]+)</span> <span class="pre">-</span> <span class="pre">([A-Z]+):</span> <span class="pre">(.+)')</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">None</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span> </span><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">None</span><span class="p"><span class="pre">,</span> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#src.Logging.log_exploration.get_model_score_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>utility finds modeling score data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>message</strong> (<em>str</em>) – text to find score in</p></li>
+<li><p><strong>pattern</strong> (<em>re.Pattern</em>) – pattern used to find the scores</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>if data is found, the name of the score as well as the score found is returned</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Logging.log_exploration.get_substring">
+<span class="sig-prename descclassname"><span class="pre">src.Logging.log_exploration.</span></span><span class="sig-name descname"><span class="pre">get_substring</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pattern</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">re.Pattern</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">None</span><span class="p"><span class="pre">,</span> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#src.Logging.log_exploration.get_substring" title="Permalink to this definition">¶</a></dt>
+<dd><p>utility which returns an int from the group specified if found in x using the passed pattern</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> (<em>str</em>) – text data to search</p></li>
+<li><p><strong>pattern</strong> (<em>re.Pattern</em>) – regular expression pattern to use for searching</p></li>
+<li><p><strong>group</strong> (<em>int</em>) – which group to return and int from</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>int if found in x</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Logging.log_exploration.get_traceback_data">
+<span class="sig-prename descclassname"><span class="pre">src.Logging.log_exploration.</span></span><span class="sig-name descname"><span class="pre">get_traceback_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">get_header</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">traceback_message_pattern</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">re.Pattern</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">re.compile('\\t([^\\t:]+):\\s([^\\t^]+)\\t$')</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#src.Logging.log_exploration.get_traceback_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>utility which searches the passed message for traceback data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>message</strong> (<em>str</em>) – text to search in</p></li>
+<li><p><strong>get_header</strong> (<em>bool</em>) – whether to return the module from the traceback or the message as a whole</p></li>
+<li><p><strong>traceback_message_pattern</strong> (<em>re.Pattern</em>) – used to identify traceback data in the passed message</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>if the pattern matches either the traceback message, or the module with the error is returned; else None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Logging.log_exploration.ingest_logs">
+<span class="sig-prename descclassname"><span class="pre">src.Logging.log_exploration.</span></span><span class="sig-name descname"><span class="pre">ingest_logs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initialize_data_source</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.Logging.log_exploration.ingest_logs" title="Permalink to this definition">¶</a></dt>
+<dd><p>entry point for log processing from the cli-modeling.py location</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_path</strong> (<em>Path</em>) – location of data head</p></li>
+<li><p><strong>initialize_data_source</strong> (<em>bool</em>) – whether to initialize a source file if it is missing</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Logging.log_exploration.locate_and_distribute_attributes">
+<span class="sig-prename descclassname"><span class="pre">src.Logging.log_exploration.</span></span><span class="sig-name descname"><span class="pre">locate_and_distribute_attributes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Logging.log_exploration.locate_and_distribute_attributes" title="Permalink to this definition">¶</a></dt>
+<dd><p>suite which houses various log feature pulls</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>df</strong> (<em>pd.DataFrame</em>) – log data to process</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>log data with additional features extracted</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Logging.log_exploration.process_log_features">
+<span class="sig-prename descclassname"><span class="pre">src.Logging.log_exploration.</span></span><span class="sig-name descname"><span class="pre">process_log_features</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Logging.log_exploration.process_log_features" title="Permalink to this definition">¶</a></dt>
+<dd><p>performs some processing steps on various log attributes</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>df</strong> (<em>pd.DataFrame</em>) – log data</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>log data with processed results</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Logging.log_exploration.process_logs">
+<span class="sig-prename descclassname"><span class="pre">src.Logging.log_exploration.</span></span><span class="sig-name descname"><span class="pre">process_logs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">remove_orphans</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Logging.log_exploration.process_logs" title="Permalink to this definition">¶</a></dt>
+<dd><p>suite for processing logs</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pd.DataFrame</em>) – log data to process</p></li>
+<li><p><strong>remove_orphans</strong> (<em>bool</em>) – whether to remove logs that do not have a genesis log</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>log data that is processed and ready for reference</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Logging.log_exploration.process_namespace_attributes">
+<span class="sig-prename descclassname"><span class="pre">src.Logging.log_exploration.</span></span><span class="sig-name descname"><span class="pre">process_namespace_attributes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Logging.log_exploration.process_namespace_attributes" title="Permalink to this definition">¶</a></dt>
+<dd><p>suite processes the data types of the hard coded attributes</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>df</strong> (<em>pd.DataFrame</em>) – log data to process</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>log data with the the specified columns data type processed</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.Logging.log_exploration.process_traceback_messages">
+<span class="sig-prename descclassname"><span class="pre">src.Logging.log_exploration.</span></span><span class="sig-name descname"><span class="pre">process_traceback_messages</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.Logging.log_exploration.process_traceback_messages" title="Permalink to this definition">¶</a></dt>
+<dd><p>suite for processing traceback messages which leverages get_traceback_data to find and assign traceback data</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>df</strong> (<em>pd.DataFrame</em>) – log data to process</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>log data with traceback information extracted</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-src.Logging">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-src.Logging" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="src.Modeling.html" class="btn btn-neutral float-right" title="src.Modeling package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="src.Economics.html" class="btn btn-neutral float-left" title="src.Economics package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Joshua Embry.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

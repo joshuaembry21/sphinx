@@ -1,0 +1,582 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>src.ProductionFactor package &mdash; IPPF  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="tests package" href="tests.html" />
+    <link rel="prev" title="src.Plotting package" href="src.Plotting.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> IPPF
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="readme.html">North By Northwest - Initial Production Prediction Model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html#requirements">Requirements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="readme.html#usage">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="onboarding.html">Onboarding</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Initial_Production_Prediction_Model</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="cli_data_access.html">cli-data_access module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli_data_ingestion.html">cli-data_ingestion module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli_krig.html">cli-krig module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli_modeling.html">cli-modeling module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cli_production_factor_analysis.html">cli-production_factor_analysis module</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="src.html">src package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="src.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="src.Data.html">src.Data package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.Economics.html">src.Economics package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.Logging.html">src.Logging package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.Modeling.html">src.Modeling package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="src.Plotting.html">src.Plotting package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">src.ProductionFactor package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="src.html#module-src">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tests.html">tests package</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">IPPF</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">Initial_Production_Prediction_Model</a> &raquo;</li>
+        
+          <li><a href="src.html">src package</a> &raquo;</li>
+        
+      <li>src.ProductionFactor package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/src.ProductionFactor.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="src-productionfactor-package">
+<h1>src.ProductionFactor package<a class="headerlink" href="#src-productionfactor-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-src.ProductionFactor.ProductionFactorGroups">
+<span id="src-productionfactor-productionfactorgroups-module"></span><h2>src.ProductionFactor.ProductionFactorGroups module<a class="headerlink" href="#module-src.ProductionFactor.ProductionFactorGroups" title="Permalink to this headline">¶</a></h2>
+<p>Group Descriptors for Production Factor Analysis</p>
+<p>&#64;author: Any Ordonez</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="src.ProductionFactor.ProductionFactorGroups.ProductionFactorGroup">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">src.ProductionFactor.ProductionFactorGroups.</span></span><span class="sig-name descname"><span class="pre">ProductionFactorGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">dict</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ProductionFactor.ProductionFactorGroups.ProductionFactorGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ProductionFactor.ProductionFactorGroups.ProductionFactorGroup.create_bar_chart">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">create_bar_chart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">quartile_label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quartile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fluid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sheet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_column</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_column</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">months_to_plot_bar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color_list_plots</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">major_y_gridlines_props</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minor_y_gridlines_props</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_area_props</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_labels_props</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ProductionFactor.ProductionFactorGroups.ProductionFactorGroup.create_bar_chart" title="Permalink to this definition">¶</a></dt>
+<dd><p>This functions creates and styles PF and SDF bar charts using specific data in the PF
+spreadsheet template</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ProductionFactor.ProductionFactorGroups.ProductionFactorGroup.create_scatter_chart">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">create_scatter_chart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">quartile_label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quartile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fluid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">col_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sheet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_column</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_column</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">months_to_plot_xy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color_list_plots</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">major_y_gridlines_props</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">minor_y_gridlines_props</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">major_x_gridlines_props</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_area_props</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_labels_props</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ProductionFactor.ProductionFactorGroups.ProductionFactorGroup.create_scatter_chart" title="Permalink to this definition">¶</a></dt>
+<dd><p>This functions creates and styles PF and SDF scatter charts using specific data in the PF
+spreadsheet template</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ProductionFactor.ProductionFactorGroups.ProductionFactorGroup.create_well_count_chart">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">create_well_count_chart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">quartile_label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quartile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_row</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_column</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_column</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sheet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">year_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">color_list_plots</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">major_y_gridlines_props</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_area_props</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">axis_labels_props</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.ProductionFactor.ProductionFactorGroups.ProductionFactorGroup.create_well_count_chart" title="Permalink to this definition">¶</a></dt>
+<dd><p>This functions creates and styles well count scatter charts using specific data in the PF
+spreadsheet template</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ProductionFactor.ProductionFactorGroups.ProductionFactorGroup.perform_analysis">
+<span class="sig-name descname"><span class="pre">perform_analysis</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#src.ProductionFactor.ProductionFactorGroups.ProductionFactorGroup.perform_analysis" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ProductionFactor.ProductionFactorGroups.ProductionFactorGroup.pf_dict_to_excel">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">pf_dict_to_excel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pf_dict</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.ProductionFactor.ProductionFactorGroups.ProductionFactorGroup.pf_dict_to_excel" title="Permalink to this definition">¶</a></dt>
+<dd><p>This functions exports production factors data (both oil and gas) to an excel file
+(by year and ippf group)</p>
+<p>4 Sheets/Tabs:    Named by IPPF Group
+7 Columns:        Month, Oil PF, Oil STDEV, Oil Count, Gas PF, Gas STDEV, Gas Count</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pf_dict</strong> – dictionary with production and standard deviations factors per year and ippf group</p></li>
+<li><p><strong>filename</strong> – path and filename of the .xlsx file</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>.xlsx file</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ProductionFactor.ProductionFactorGroups.ProductionFactorGroup.pf_field_concat_base_generator">
+<em class="property"><span class="pre">static</span> </em><span class="sig-name descname"><span class="pre">pf_field_concat_base_generator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prod_zone</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prod_type</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">play</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">subplay</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">county</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">township_loc</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'all'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">range_loc</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span> </span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'all'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#src.ProductionFactor.ProductionFactorGroups.ProductionFactorGroup.pf_field_concat_base_generator" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>prod_zone</strong> – Producing zone(s); type: [‘str’]; default: ‘all’</p></li>
+<li><p><strong>prod_type</strong> – Production type(s); type: [‘str’]; default: ‘all’</p></li>
+<li><p><strong>play</strong> – DI Play(s); type: [‘str’]; default: ‘all’</p></li>
+<li><p><strong>subplay</strong> – DI Subplay(s); type: [‘str’]; default: ‘all’</p></li>
+<li><p><strong>state</strong> – State(s); type: [‘str’]; default: ‘all’</p></li>
+<li><p><strong>county</strong> – County/Parish(es); type: [‘str’]; default: ‘all’</p></li>
+<li><p><strong>township_loc</strong> – Township(s); type: [‘str’]; default: ‘all’</p></li>
+<li><p><strong>range_loc</strong> – Range(s); type: [‘str’]; default: ‘all’</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dictionary with labels for production factors plots and filenames</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ProductionFactor.ProductionFactorGroups.ProductionFactorGroup.pf_filename">
+<span class="sig-name descname"><span class="pre">pf_filename</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_ext</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'.pdf'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#src.ProductionFactor.ProductionFactorGroups.ProductionFactorGroup.pf_filename" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function generates the name of the file with production factor plots/data,
+based on the characteristics of the producing/economic group and fluid phase</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>file_ext</strong> – file extension; type: ‘str’; default: ‘.pdf’</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>filename - name of files with production factor plots/data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ProductionFactor.ProductionFactorGroups.ProductionFactorGroup.pf_plot_title">
+<span class="sig-name descname"><span class="pre">pf_plot_title</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#src.ProductionFactor.ProductionFactorGroups.ProductionFactorGroup.pf_plot_title" title="Permalink to this definition">¶</a></dt>
+<dd><p>args:</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>title text for production factors plots</p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>plot_title</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ProductionFactor.ProductionFactorGroups.ProductionFactorGroup.read_data">
+<span class="sig-name descname"><span class="pre">read_data</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">,</span> </span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#src.ProductionFactor.ProductionFactorGroups.ProductionFactorGroup.read_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ProductionFactor.ProductionFactorGroups.ProductionFactorGroup.sort_wb_sheets">
+<span class="sig-name descname"><span class="pre">sort_wb_sheets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.ProductionFactor.ProductionFactorGroups.ProductionFactorGroup.sort_wb_sheets" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function sorts spreadsheet tabs when single_product is False</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="src.ProductionFactor.ProductionFactorGroups.ProductionFactorGroup.write_excel_spreadsheet">
+<span class="sig-name descname"><span class="pre">write_excel_spreadsheet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pf_dict</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#src.ProductionFactor.ProductionFactorGroups.ProductionFactorGroup.write_excel_spreadsheet" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function exports production factors, standard deviation factors, and well counts
+(per year and ippf group) to an excel spreadsheet. It also performs some calculations,
+adds formulas, and creates charts within the excel file.</p>
+<blockquote>
+<div><dl class="simple">
+<dt># Data sheets:  Info - description of producing group</dt><dd><p>IPPF Quartile 1 (OQ1 and/or GQ1)
+IPPF Quartile 2 (OQ2 and/or GQ2)
+IPPF Quartile 3 (OQ3 and/or GQ3)
+IPPF Quartile 4 (OQ4 and/or GQ4)
+PF - projected PF summary table
+SDF - projected SDF summary table</p>
+</dd>
+<dt># Columns (Q1 to Q4):   Month, 2010-2020 PFs, Projected PF,</dt><dd><p>Month, 2010-2020 STDEV, Projected STDEV,
+Month, 2010-2020 WCs</p>
+</dd>
+<dt># Calculations: Projected PF line (using Arp’s Equation)</dt><dd><p>Projected SD line (using linear interpolation)
+Average 12-month well count</p>
+</dd>
+<dt># Chart sheets: Production Factors - Bar plot (first 36 months)</dt><dd><p>Production Factors - Scatter or XY plot (first 84 months)
+Production Factors - Bar plot (first 120 months)
+Standard Deviation Factors - Bar plot (first 36 months)
+Standard Deviation Factors - Scatter or XY plot (first 84 months)
+Wellcounts - Scatter or XY plot (average 12-month well count)
+Oil Production Factors Projection - Scatter plot (first 84 months)
+Gas Production Factors Projection - Scatter plot (first 84 months)</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pf_dict</strong> – dictionary with production and standard deviations factors per year and ippf group</p></li>
+<li><p><strong>filename</strong> – path and filename of the .xlsx file</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-src.ProductionFactor.pf_plotting_functions">
+<span id="src-productionfactor-pf-plotting-functions-module"></span><h2>src.ProductionFactor.pf_plotting_functions module<a class="headerlink" href="#module-src.ProductionFactor.pf_plotting_functions" title="Permalink to this headline">¶</a></h2>
+<p>Production Factor Analysis (plotting functions)</p>
+<p>&#64;author: Any Ordonez</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.ProductionFactor.pf_plotting_functions.ippf_boxplot_by_year">
+<span class="sig-prename descclassname"><span class="pre">src.ProductionFactor.pf_plotting_functions.</span></span><span class="sig-name descname"><span class="pre">ippf_boxplot_by_year</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ols_df</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fluid</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_title</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat_len_group</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ippf_bin_label</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">matplotlib.figure.Figure</span><span class="p"><span class="pre">,</span> </span><span class="pre">pandas.core.frame.DataFrame</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#src.ProductionFactor.pf_plotting_functions.ippf_boxplot_by_year" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function creates a boxplot of ippf grouped by year and returns the
+statistics for each group</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ols_df</strong> – one-line summary dataframe (already filtered by economic group characteristics)</p></li>
+<li><p><strong>fluid</strong> – ‘Oil’ or ‘Gas’</p></li>
+<li><p><strong>plot_title</strong> (<em>label</em>) – </p></li>
+<li><p><strong>lat_len_group</strong> (<em>label</em>) – </p></li>
+<li><p><strong>ippf_bin_label</strong> (<em>label</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>fig
+stats_df</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.ProductionFactor.pf_plotting_functions.pf_2x2_scatter_plot">
+<span class="sig-prename descclassname"><span class="pre">src.ProductionFactor.pf_plotting_functions.</span></span><span class="sig-name descname"><span class="pre">pf_2x2_scatter_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pf_dict</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fluid</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ippf_groups</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_title</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat_len_group</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">matplotlib.figure.Figure</span></span></span><a class="headerlink" href="#src.ProductionFactor.pf_plotting_functions.pf_2x2_scatter_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function generates four scatter plots of production factors vs month
+(one plot per ippf group), colored by first prod year</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pf_dict</strong> – production factors dictionary (1st key: year; 2nd key: ippf)</p></li>
+<li><p><strong>fluid</strong> – ‘Oil’ or ‘Gas’</p></li>
+<li><p><strong>ippf_groups</strong> – list of ippf_groups (based on average percentiles [P25, P50, P75])</p></li>
+<li><p><strong>plot_title</strong> (<em>label</em>) – </p></li>
+<li><p><strong>lat_len_group</strong> (<em>label</em>) – </p></li>
+<li><p><strong>'zoom-in'</strong> (<em>scale - 'full' or</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>fig</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.ProductionFactor.pf_plotting_functions.pf_3x3_scatter_plot">
+<span class="sig-prename descclassname"><span class="pre">src.ProductionFactor.pf_plotting_functions.</span></span><span class="sig-name descname"><span class="pre">pf_3x3_scatter_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pf_dict</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fluid</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ippf_groups</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_title</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat_len_group</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">matplotlib.figure.Figure</span></span></span><a class="headerlink" href="#src.ProductionFactor.pf_plotting_functions.pf_3x3_scatter_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function generates nine scatter plots of production factors vs month (one plot per year),
+colored by ippf group</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pf_dict</strong> – production factors dictionary (1st key: year; 2nd key: ippf)</p></li>
+<li><p><strong>fluid</strong> – ‘Oil’ or ‘Gas’</p></li>
+<li><p><strong>ippf_groups</strong> – list of ippf_groups (based on average percentiles [P25, P50, P75])</p></li>
+<li><p><strong>plot_title</strong> (<em>label</em>) – </p></li>
+<li><p><strong>lat_len_group</strong> (<em>label</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>fig</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.ProductionFactor.pf_plotting_functions.pf_5x2_scatter_plot">
+<span class="sig-prename descclassname"><span class="pre">src.ProductionFactor.pf_plotting_functions.</span></span><span class="sig-name descname"><span class="pre">pf_5x2_scatter_plot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pf_dict</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fluid</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ippf_groups</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_title</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat_len_group</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#src.ProductionFactor.pf_plotting_functions.pf_5x2_scatter_plot" title="Permalink to this definition">¶</a></dt>
+<dd><p>This plot generates a comprehensive plot with production factors, standard deviation factors,
+and well count per year and per ippf group</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pf_dict</strong> – production factors dictionary (1st key: year; 2nd key: ippf)</p></li>
+<li><p><strong>fluid</strong> – ‘Oil’ or ‘Gas’</p></li>
+<li><p><strong>ippf_groups</strong> (<em>ippf_groups - list of</em>) – </p></li>
+<li><p><strong>plot_title</strong> (<em>label</em>) – </p></li>
+<li><p><strong>lat_len_group</strong> (<em>label</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>fig_dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.ProductionFactor.pf_plotting_functions.pf_barplot">
+<span class="sig-prename descclassname"><span class="pre">src.ProductionFactor.pf_plotting_functions.</span></span><span class="sig-name descname"><span class="pre">pf_barplot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pf_dict</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fluid</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">var</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ippf_groups</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">plot_title</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lat_len_group</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="headerlink" href="#src.ProductionFactor.pf_plotting_functions.pf_barplot" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function generates a bar plot of monthly production factors and/or standard deviation
+factors per first prod year</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>pf_dict</strong> – production factors dictionary (1st key: year; 2nd key: ippf)</p></li>
+<li><p><strong>fluid</strong> – ‘Oil’ or ‘Gas’</p></li>
+<li><p><strong>var</strong> – ‘Production Factor’ or ‘STDEV’</p></li>
+<li><p><strong>ippf_groups</strong> – list of ippf_groups (based on average percentiles [P25, P50, P75])</p></li>
+<li><p><strong>plot_title</strong> (<em>label</em>) – </p></li>
+<li><p><strong>lat_len_group</strong> (<em>label</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>fig_dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="src-productionfactor-pf-pre-analysis-bybasin-module">
+<h2>src.ProductionFactor.pf_pre-analysis_byBasin module<a class="headerlink" href="#src-productionfactor-pf-pre-analysis-bybasin-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="src-productionfactor-pf-pre-analysis-byprodzone-module">
+<h2>src.ProductionFactor.pf_pre-analysis_byProdZone module<a class="headerlink" href="#src-productionfactor-pf-pre-analysis-byprodzone-module" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-src.ProductionFactor.production_factor_calculator">
+<span id="src-productionfactor-production-factor-calculator-module"></span><h2>src.ProductionFactor.production_factor_calculator module<a class="headerlink" href="#module-src.ProductionFactor.production_factor_calculator" title="Permalink to this headline">¶</a></h2>
+<p>This file contains the economic modeling workflow for the lifetime of a given well</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.ProductionFactor.production_factor_calculator.compute_production_max">
+<span class="sig-prename descclassname"><span class="pre">src.ProductionFactor.production_factor_calculator.</span></span><span class="sig-name descname"><span class="pre">compute_production_max</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">apis</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.ProductionFactor.production_factor_calculator.compute_production_max" title="Permalink to this definition">¶</a></dt>
+<dd><p>method computes the statistics of the peak oil and gas production; saves computations to disk</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_path</strong> (<em>Path</em>) – path to data directory</p></li>
+<li><p><strong>apis</strong> (<em>list</em>) – api’s to compute for</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>maximum production data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.ProductionFactor.production_factor_calculator.compute_production_stats_per_month">
+<span class="sig-prename descclassname"><span class="pre">src.ProductionFactor.production_factor_calculator.</span></span><span class="sig-name descname"><span class="pre">compute_production_stats_per_month</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">apis</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.ProductionFactor.production_factor_calculator.compute_production_stats_per_month" title="Permalink to this definition">¶</a></dt>
+<dd><p>method computes production stats for oil and gas monthly production population; saves computation to disk</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_path</strong> (<em>Path</em>) – path to data directory</p></li>
+<li><p><strong>apis</strong> (<em>list</em>) – list of api’s to compute for</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>production data</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.ProductionFactor.production_factor_calculator.process_production_data">
+<span class="sig-prename descclassname"><span class="pre">src.ProductionFactor.production_factor_calculator.</span></span><span class="sig-name descname"><span class="pre">process_production_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">pathlib.Path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">apis</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">normalize_months</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="headerlink" href="#src.ProductionFactor.production_factor_calculator.process_production_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>method preps the data needed for financial modeling process</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data_path</strong> (<em>Path</em>) – path to data directory</p></li>
+<li><p><strong>apis</strong> (<em>list</em>) – list of api’s to compute for</p></li>
+<li><p><strong>normalize_months</strong> (<em>bool</em>) – option to re-normalize monthly data if desired</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dataframe with production factors and distribution statistics per month</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-src.ProductionFactor">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-src.ProductionFactor" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="tests.html" class="btn btn-neutral float-right" title="tests package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="src.Plotting.html" class="btn btn-neutral float-left" title="src.Plotting package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Joshua Embry.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
